@@ -1,0 +1,152 @@
+<fonts-modification version="1">
+  <family customizationType="new-named-family" name="google-sans">
+    <font weight="400" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="400"/>
+    </font>
+    <font weight="500" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="500"/>
+    </font>
+    <font weight="700" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="700"/>
+    </font>
+    <font weight="400" style="italic">Wear-GoogleSans-Italic.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="400"/>
+    </font>
+    <font weight="500" style="italic">Wear-GoogleSans-Italic.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="500"/>
+    </font>
+    <font weight="700" style="italic">Wear-GoogleSans-Italic.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="700"/>
+    </font>
+  </family>
+
+  <family-list customizationType="new-named-family" name="google-sans-flex">
+    <family>
+      <font style="normal" weight="400">Wear-GoogleSansFlex-Regular.ttf
+        <axis stylevalue="400" tag="wght" />
+      </font>
+      <font style="normal" weight="500">Wear-GoogleSansFlex-Regular.ttf
+        <axis stylevalue="500" tag="wght" />
+      </font>
+      <font style="normal" weight="700">Wear-GoogleSansFlex-Regular.ttf
+        <axis stylevalue="700" tag="wght" />
+      </font>
+    </family>
+    <family>
+      <font style="normal" weight="400">Wear-GoogleSans-Regular.ttf
+        <axis stylevalue="400" tag="wght" />
+      </font>
+      <font style="normal" weight="500">Wear-GoogleSans-Regular.ttf
+        <axis stylevalue="500" tag="wght" />
+      </font>
+      <font style="normal" weight="700">Wear-GoogleSans-Regular.ttf
+        <axis stylevalue="700" tag="wght" />
+      </font>
+    </family>
+  </family-list>
+
+  <family customizationType="new-named-family" name="google-sans-medium">
+    <font weight="500" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="500"/>
+    </font>
+  </family>
+
+  <family customizationType="new-named-family" name="google-sans-clock">
+    <font>Wear-GoogleSansClock-Regular.ttf</font>
+  </family>
+
+  <family customizationType="new-named-family" name="google-sans-bold">
+    <font weight="700" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="18.0"/>
+      <axis tag="wght" stylevalue="700"/>
+    </font>
+  </family>
+
+  <family customizationType="new-named-family" name="google-sans-text">
+    <font weight="400" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="400"/>
+    </font>
+    <font weight="500" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="500"/>
+    </font>
+    <font weight="700" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="700"/>
+    </font>
+    <font weight="400" style="italic">Wear-GoogleSans-Italic.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="400"/>
+    </font>
+    <font weight="500" style="italic">Wear-GoogleSans-Italic.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="500"/>
+    </font>
+    <font weight="700" style="italic">Wear-GoogleSans-Italic.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="700"/>
+    </font>
+  </family>
+
+  <family customizationType="new-named-family" name="google-sans-text-medium">
+    <font weight="500" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="500"/>
+    </font>
+  </family>
+
+  <family customizationType="new-named-family" name="google-sans-text-bold">
+    <font weight="700" style="normal">Wear-GoogleSans-Regular.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="700"/>
+    </font>
+  </family>
+
+  <family customizationType="new-named-family" name="google-sans-text-italic">
+    <font weight="400" style="italic">Wear-GoogleSans-Italic.ttf
+      <axis tag="GRAD" stylevalue="0"/>
+      <axis tag="opsz" stylevalue="17.0"/>
+      <axis tag="wght" stylevalue="400"/>
+    </font>
+  </family>
+
+  <!-- Font aliases to support OEM customization. OEMs may use these
+    font-family-*device-default typefaces in their respective 1P styles,
+    substituting their own fonts as needed. Note this is independent of
+    3P font styling & theming -->
+  <alias name="font-family-device-default" to="google-sans" />
+  <alias name="font-family-medium-device-default" to="google-sans-medium" />
+  <alias name="font-family-bold-device-default" to="google-sans-bold" />
+
+  <alias name="font-family-text-device-default" to="google-sans-text" />
+  <alias name="font-family-text-medium-device-default" to="google-sans-text-medium" />
+  <alias name="font-family-text-bold-device-default" to="google-sans-text-bold" />
+  <alias name="font-family-text-italic-device-default" to="google-sans-text-italic" />
+
+  <alias name="font-family-flex-device-default" to="google-sans-flex"/>
+
+</fonts-modification>

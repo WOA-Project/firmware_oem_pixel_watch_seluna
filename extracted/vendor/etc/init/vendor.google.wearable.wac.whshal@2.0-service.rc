@@ -1,0 +1,9 @@
+service vendor.google.wearable.wac.whs-hal-2-0 /apex/com.google.wearable.wac.whshal/bin/hw/vendor.google.wearable.wac.whshal@2.0-service
+    class hal
+    user system
+    group system context_hub
+    file /dev/kmsg w
+    updatable
+
+on boot
+    setprop log.tag.WHSHAL DEBUG

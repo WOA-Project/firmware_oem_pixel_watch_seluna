@@ -1,0 +1,21 @@
+<!--
+    Input:
+        hardware/qcom/sw5100/display/composer/vendor.qti.hardware.display.composer-service.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.graphics.composer3</name>
+        <version>2</version>
+        <fqname>IComposer/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.display.color</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.5::IDisplayColor/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.display.postproc</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IDisplayPostproc/default</fqname>
+    </hal>
+</manifest>

@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/google/wearable/wac/contexthub/android.hardware.contexthub-service.wac.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.contexthub</name>
+        <version>3</version>
+        <fqname>IContextHub/default</fqname>
+    </hal>
+</manifest>

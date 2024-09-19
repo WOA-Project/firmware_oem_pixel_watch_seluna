@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These are configurations that should exist on 2023 and newer Google Pixel Watch devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2023 and newer Google Pixel Watch devices. -->
+    <feature name="com.google.android.feature.PIXEL_WATCH_2023_EXPERIENCE" />
+
+    <component-override package="com.fitbit.FitbitMobile">
+        <component class="com.fitbit.complications.offloadable.steps.OffloadableStepsComplicationDataSourceService" enabled="true" />
+        <component class="com.fitbit.complications.steps.StepsComplicationDataSourceService" enabled="false" />
+        <component class="com.fitbit.complications.offloadable.heartrate.OffloadableHeartRateComplicationDataSourceService" enabled="true" />
+        <component class="com.fitbit.complications.heartrate.HeartRateComplicationDataSourceService" enabled="false" />
+    </component-override>
+</config>

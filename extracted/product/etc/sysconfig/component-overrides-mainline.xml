@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <component-override package="com.google.android.ondevicepersonalization.services" >
+        <component class="com.android.ondevicepersonalization.services.OnDevicePersonalizationBroadcastReceiver" enabled="false" />
+    </component-override>
+    <component-override package="com.google.android.devicelockcontroller" >
+        <component class="com.android.devicelockcontroller.receivers.RecordBootTimestampReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.CheckInBootCompletedReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.FinalizationBootCompletedReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.LockedBootCompletedReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.TimeChangedBroadcastReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.ProvisionReadyReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.ResumeProvisionReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.NextProvisionFailedStepReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.receivers.ResetDeviceReceiver" enabled="false" />
+        <component class="com.android.devicelockcontroller.WorkManagerExceptionHandler$WorkFailureAlarmReceiver" enabled="false" />
+    </component-override>
+</config>

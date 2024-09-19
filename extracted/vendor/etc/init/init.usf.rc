@@ -1,0 +1,11 @@
+#
+# Copyright 2020 Google LLC. All Rights Reserved.
+#
+# USF init config file.
+#
+
+on post-fs-data
+    # Create USF registry script save directory.
+    mkdir /data/vendor/sensors 0770 system system
+    mkdir /data/vendor/sensors/registry 0770 system system
+

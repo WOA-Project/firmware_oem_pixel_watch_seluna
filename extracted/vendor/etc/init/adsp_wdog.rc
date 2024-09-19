@@ -1,0 +1,6 @@
+on property:sys.boot_completed=1
+    start adsp_wdog
+
+service adsp_wdog /vendor/bin/adsp_wdog
+    user root
+    group root system

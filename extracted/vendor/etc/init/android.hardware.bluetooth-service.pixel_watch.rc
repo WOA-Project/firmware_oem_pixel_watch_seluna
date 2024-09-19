@@ -1,0 +1,5 @@
+service pixel_watch /vendor/bin/hw/android.hardware.bluetooth-service.pixel_watch
+    class hal
+    user bluetooth
+    group bluetooth net_admin net_bt_admin system context_hub
+    capabilities NET_ADMIN WAKE_ALARM

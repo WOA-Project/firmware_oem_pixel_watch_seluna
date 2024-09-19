@@ -1,0 +1,19 @@
+on property:vendor.all.modules.ready=1
+    wait /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/calibration/redc_cal_time_ms
+    mkdir /mnt/vendor/persist/haptics 0770 system system
+    chmod 770 /mnt/vendor/persist/haptics
+    chmod 440 /mnt/vendor/persist/haptics/cs40l26.cal
+
+    chown system system /mnt/vendor/persist/haptics
+    chown system system /mnt/vendor/persist/haptics/cs40l26.cal
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/calibration/f0_stored
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/calibration/q_stored
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/calibration/redc_stored
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/vibe_state
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/num_waves
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/f0_offset
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/owt_free_space
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/f0_comp_enable
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/redc_comp_enable
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/delay_before_stop_playback_us
+    enable vendor.vibrator.cs40l26

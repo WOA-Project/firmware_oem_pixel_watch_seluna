@@ -1,0 +1,13 @@
+on property:sys.boot_completed=1
+    write /proc/sys/vm/watermark_scale_factor 100
+
+    # set a flag to ensure the overrides to take place after general watermark
+    setprop vendor.memory.base_watermark_set 1
+
+# On first boot of FOta(Zombie), ro.boot.mode=sota
+on property:sys.boot_completed=1 && property:ro.boot.mode=sota && property:vendor.memory.base_watermark_set=1
+    write /proc/sys/vm/watermark_scale_factor 300
+
+# on reboot/second boot applying ota factoryota.reboot is set to enabled
+on property:sys.boot_completed=1 && property:persist.vendor.factoryota.reboot=enabled && property:vendor.memory.base_watermark_set=1
+    write /proc/sys/vm/watermark_scale_factor 300

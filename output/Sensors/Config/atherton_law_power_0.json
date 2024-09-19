@@ -1,0 +1,16 @@
+{
+  "config":{
+    "hw_platform": ["MTP", "IOT", "QRD", "RCM", "IDP", "WDP"],
+    "soc_id": ["486", "517"],
+    "platform_subtype_id": ["1"]
+  },
+  "power":{
+    "owner": "power_manager",
+    ".island":{
+      "owner": "power_manager",
+      "enable_island":{ "type": "int", "ver": "0",
+        "data": "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/qcom/sw5100/proprietary/limits-hal/vendor.qti.hardware.limits-service.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="hidl">
+        <name>vendor.qti.hardware.limits</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ILimits/default</fqname>
+    </hal>
+</manifest>

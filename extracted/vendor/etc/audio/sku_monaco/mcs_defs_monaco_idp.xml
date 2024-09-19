@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.     -->
+<!-- SPDX-License-Identifier: BSD-3-Clause-Clear                                       -->
+
+<mcs_defs>
+        <device>
+            <!-- SPEAKER  -->
+            <id>0xA2000001</id>
+            <snd_device_name>speaker</snd_device_name>
+            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-0</back_end_name>
+            <usecase>
+            <!-- PCM_LL_PLAYBACK  -->
+                <type>0xA100000E</type>
+            </usecase>
+        </device>
+        <device>
+            <!-- SPEAKER MIC -->
+            <id>0xA3000001</id>
+            <snd_device_name>speaker-dmic-endfire</snd_device_name>
+            <back_end_name>CODEC_DMA-LPAIF_RXTX-TX-4</back_end_name>
+            <usecase>
+            <!-- PCM_RECORD   -->
+                <type>0xB1000001</type>
+            </usecase>
+        </device>
+        <device>
+            <!-- VI TX -->
+            <id>0xA3000009</id>
+            <snd_device_name>vi-feedback</snd_device_name>
+            <back_end_name>CODEC_DMA-LPAIF_RXTX-TX-4</back_end_name>
+            <usecase>
+            <!-- PCM_RECORD   -->
+                <type>0xB1000001</type>
+            <!-- Add support for spkr_prot_vi_map based on number of speaker -->
+            <!-- RIGHT_SPKR   = 0 -->
+            <!-- LEFT_SPKR    = 1 -->
+            <!-- STEREO_SPKR  = 2 -->
+                <ckv key="0xBF000000" value="0" />
+            </usecase>
+        </device>
+</mcs_defs>

@@ -1,0 +1,9 @@
+#################################################################
+#   Copyright (c) 2021 Qualcomm Technologies, Inc.
+#   All Rights Reserved.
+#   Confidential and Proprietary - Qualcomm Technologies, Inc.
+#################################################################
+service powerstateservice-hal-1-0 /vendor/bin/hw/vendor.qti.hardware.powerstateservice@1.0-service
+    class early_hal
+    user system
+    group system

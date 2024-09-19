@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<permissions>
+    <privapp-permissions package="com.google.android.apps.photos">
+        <permission name="com.google.wear.permission.GET_COMPLICATION_DYNAMIC_VALUE" fixed="false"/>
+	    <permission name="android.permission.WRITE_SECURE_SETTINGS" fixed="false"/>
+	    <permission name="com.google.wear.permission.BYPASS_COMPLICATIONS_RESTRICTION" fixed="false"/>
+    </privapp-permissions>
+</permissions>
+

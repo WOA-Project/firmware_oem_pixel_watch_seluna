@@ -1,0 +1,21 @@
+service vendor.displayoffload-hal-2-1 /vendor/bin/hw/vendor.google_clockwork.displayoffload@2.1-service.1p
+    disabled
+    gentle_kill
+    class hal
+    user system
+    group system
+    file /dev/kmsg w
+
+on property:vendor.wac.state=booting
+    stop vendor.displayoffload-hal-2-1
+    write /sys/devices/virtual/nanohub/nanohub_comms/display_select 1
+    write /sys/devices/virtual/display/display_comms/display_select 1
+
+on property:vendor.wac.state=running
+    start vendor.displayoffload-hal-2-1
+
+on property:vendor.all.modules.ready=1
+    chmod 0660 /sys/devices/virtual/nanohub/nanohub_comms/display_select
+    chown system system /sys/devices/virtual/nanohub/nanohub_comms/display_select
+    chmod 0660 /sys/devices/virtual/display/display_comms/display_select
+    chown system system /sys/devices/virtual/display/display_comms/display_select

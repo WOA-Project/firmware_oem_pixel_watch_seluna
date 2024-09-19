@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.google.android.wearable.fitbit.mcu.updater">
+        <permission name="com.google.android.wearable.fitbit.mcu.data.ACCESS_MCU_DATA_PROVIDER"/>
+    </privapp-permissions>
+</permissions>

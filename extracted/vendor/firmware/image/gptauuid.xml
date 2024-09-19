@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+http://www.ietf.org/rfc/rfc4122.txt
+-->
+
+<image_list>
+  <image name="gpqese.mbn">
+    <uuid>"32552B22-89FE-42B4-8A45A0C4E2DB0326"</uuid>
+    <info>"GP ESE Trusted Application"</info>
+  </image>
+</image_list>

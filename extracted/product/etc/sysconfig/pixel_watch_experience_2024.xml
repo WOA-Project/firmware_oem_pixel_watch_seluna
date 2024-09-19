@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These are configurations that should exist on 2024 and newer Google Pixel Watch devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2024 and newer Google Pixel Watch devices. -->
+    <feature name="com.google.android.feature.PIXEL_WATCH_2024_EXPERIENCE" />
+
+    <component-override package="com.fitbit.FitbitMobile">
+        <component class="com.google.android.wearable.fitbit.mainapp.complications.exercisequicklaunch.ExerciseQuickLaunchComplicationDataSourceService" enabled="true" />
+        <component class="com.google.android.wearable.fitbit.mainapp.complications.offloadable.azm.OffloadableAZMComplicationDataSourceService" enabled="true" />
+        <component class="com.fitbit.complications.azm.AZMComplicationDataSourceService" enabled="false" />
+        <component class="com.google.android.wearable.fitbit.mainapp.complications.offloadable.calories.OffloadableCaloriesComplicationDataSourceService" enabled="true" />
+        <component class="com.fitbit.complications.calories.CaloriesComplicationDataSourceService" enabled="false" />
+        <component class="com.google.android.wearable.fitbit.mainapp.complications.offloadable.distance.OffloadableDistanceComplicationDataSourceService" enabled="true" />
+        <component class="com.fitbit.complications.distance.DistanceComplicationDataSourceService" enabled="false" />
+        <component class="com.google.android.wearable.fitbit.mainapp.complications.offloadable.floors.OffloadableFloorsComplicationDataSourceService" enabled="true" />
+        <component class="com.fitbit.complications.floors.FloorsComplicationDataSourceService" enabled="false" />
+    </component-override>
+</config>

@@ -1,0 +1,26 @@
+on property:vendor.thermal.thermal-engine.config=*
+    # queue the trigger to start thermal-engine and continue execution
+    trigger enable-thermal-engine
+
+on property:vendor.thermal.reload_config=1
+    # queue the trigger to reload thermal-engine and continue execution
+    trigger reload-thermal-engine
+
+on enable-thermal-engine
+    start thermal-engine
+
+on reload-thermal-engine
+    restart thermal-engine
+
+service thermal-engine /vendor/bin/thermal-engine-v2 -c /vendor/etc/${vendor.thermal.thermal-engine.config}
+    class main
+    user root
+    group root system
+    socket thermal-send-client stream 0660 system oem_2907
+    socket thermal-recv-client stream 0660 system oem_2907
+    socket thermal-recv-passive-client stream 0660 system oem_2907
+    socket thermal-send-rule stream 0660 system oem_2907
+    disabled
+
+on property:sys.boot_completed=1 && property:ro.bootmode=normal
+    restart thermal-engine

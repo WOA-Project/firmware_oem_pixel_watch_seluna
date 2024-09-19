@@ -1,0 +1,74 @@
+import /vendor/etc/init/hw/init.qcom.rc
+
+on fs
+    mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth bluetooth
+
+on property:vendor.all.modules.ready=1
+    # Bluetooth
+    chown bluetooth bluetooth /proc/bluetooth/sleep/lpm
+    chmod 0660 /proc/bluetooth/sleep/lpm
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
+    chmod 0660 /proc/bluetooth/sleep/btwrite
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btwake
+    chmod 0660 /proc/bluetooth/sleep/btwake
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btpid
+    chmod 0660 /proc/bluetooth/sleep/btpid
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btmode
+    chmod 0660 /proc/bluetooth/sleep/btmode
+    chown bluetooth bluetooth /proc/bluetooth/timesync
+    chmod 0660 /proc/bluetooth/timesync
+    chown bluetooth system /dev/logbuffer_btlpm
+
+on property:ro.bootmode=usbradio && property:sys.usb.configfs=2
+    setprop sys.usb.config diag,qdss,rmnet,adb
+
+on property:ro.bootmode=factory && property:sys.usb.configfs=2
+    setprop sys.usb.config diag,qdss,rmnet,adb
+
+# Set ibatt full to 45mA for hvdcp_opti. This must be expressed as a delta
+# from our termination current of 20mA, and so is set to 25mA
+on property:ro.hardware=selene
+    setprop persist.vendor.qbg.ibatt_full_delta_ma 25
+
+# Set ibatt full to 66mA for hvdcp_opti. This must be expressed as a delta
+# from our termination current of 20mA, and so is set to 46mA
+on property:ro.hardware=luna
+    setprop persist.vendor.qbg.ibatt_full_delta_ma 46
+
+on init && property:ro.hardware=*
+    setprop persist.vendor.nfc.config_file_name libnfc-nxp.${ro.hardware}.conf
+    setprop persist.vendor.uwb.cal.sku ${ro.hardware}
+
+# Set Fast Pair ID based on provisioned case/band color
+
+# Selene
+
+# Black/Obsidian: BLK
+on property:ro.hardware=selene && property:ro.boot.hardware.strap_color=BLK
+    setprop ro.oem.fastpair_id 2C99ED
+
+# Silver/Porcelain: SLV
+on property:ro.hardware=selene && property:ro.boot.hardware.strap_color=SLV
+    setprop ro.oem.fastpair_id E329F2
+
+# Gold/Hazel: HAZ
+on property:ro.hardware=selene && property:ro.boot.hardware.strap_color=HAZ
+    setprop ro.oem.fastpair_id A08A64
+
+# Silver/Rose Quartz: PNK
+on property:ro.hardware=selene && property:ro.boot.hardware.strap_color=PNK
+    setprop ro.oem.fastpair_id 6BDB2D
+
+# Luna
+
+# Black/Obsidian: BLK
+on property:ro.hardware=luna && property:ro.boot.hardware.strap_color=BLK
+    setprop ro.oem.fastpair_id 4D4FA4
+
+# Silver/Porcelain: SLV
+on property:ro.hardware=luna && property:ro.boot.hardware.strap_color=SLV
+    setprop ro.oem.fastpair_id D934F1
+
+# Hazel/Hazel: HAZ
+on property:ro.hardware=luna && property:ro.boot.hardware.strap_color=HAZ
+    setprop ro.oem.fastpair_id 7BEFA9

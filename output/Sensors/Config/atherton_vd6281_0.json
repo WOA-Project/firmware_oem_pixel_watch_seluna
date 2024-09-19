@@ -1,0 +1,611 @@
+{
+  "config":{
+    "hw_platform": ["MTP", "IOT", "QRD", "RCM", "IDP"],
+    "soc_id": ["486", "517"],
+    "platform_subtype_id": ["1"]
+  },
+  "vd6281_0":{
+    "owner": "sns_vd6281",
+    ".config":{
+      "owner": "sns_vd6281",
+      "is_dri":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "hw_id":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "res_idx":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "sync_stream":{ "type": "int", "ver": "0",
+        "data": "0"
+      }
+    }
+  },
+  "vd6281_0_platform":{
+    "owner": "sns_vd6281",
+    ".config":{
+      "owner": "sns_vd6281",
+      "bus_type":{ "type": "int", "ver": "0",
+        "data": "5"
+      },
+      "bus_instance":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "slave_config":{ "type": "int", "ver": "0",
+        "data": "32"
+      },
+      "min_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "max_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "12500"
+      },
+      "reg_addr_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "num_rail":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "rail_on_state":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "vddio_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vddio"
+      },
+      "rigid_body_type":{ "type": "int", "ver": "0",
+      "data": "0"
+      }
+    },	
+	".ratio": {
+        "owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.000000"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.000000"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.000000"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.000000"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.000000"
+		},
+		"05": {
+			"type": "flt",
+			"ver": "0",
+			"data": "1.000000"
+		}
+	},
+	".wgolden": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "5318836.0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "16777215.0"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "10321459.0"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "14507686.0"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "14107142.0"
+		}
+	},
+    ".bgolden": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "5318836.0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "16777215.0"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "10321459.0"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "14507686.0"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "14107142.0"
+		}
+	},	
+    ".wxcoef": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.129844"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.498624"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.038019"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},            
+		"05": {
+			"type": "flt",
+			"ver": "0",
+			"data": "1.416513"
+		},
+		"06": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.713899"
+		},
+		"07": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-1.297364"
+		},
+		"08": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"09": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"10": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"11": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"12": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"13": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		}
+	},
+	".wycoef": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.029023"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.272595"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.060615"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},            
+		"05": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.284085"
+		},
+		"06": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.205839"
+		},
+		"07": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.325375"
+		},
+		"08": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"09": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"10": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"11": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"12": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"13": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		}
+	},
+	".wzcoef": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "1.113329"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.696444"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.547847"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},            
+		"05": {
+			"type": "flt",
+			"ver": "0",
+			"data": "1.545179"
+		},
+		"06": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.267817"
+		},
+		"07": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-1.156949"
+		},
+		"08": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"09": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"10": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"11": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"12": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"13": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		}
+	},
+	".bxcoef": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.129844"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.498624"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.038019"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},            
+		"05": {
+			"type": "flt",
+			"ver": "0",
+			"data": "1.416513"
+		},
+		"06": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.713899"
+		},
+		"07": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-1.297364"
+		},
+		"08": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"09": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"10": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"11": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"12": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"13": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		}
+	},
+	".bycoef": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.029023"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.272595"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.060615"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},            
+		"05": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.284085"
+		},
+		"06": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.205839"
+		},
+		"07": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.325375"
+		},
+		"08": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"09": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"10": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"11": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"12": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"13": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		}
+	},
+	".bzcoef": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "1.113329"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.696444"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-0.547847"
+		},
+		"04": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},            
+		"05": {
+			"type": "flt",
+			"ver": "0",
+			"data": "1.545179"
+		},
+		"06": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0.267817"
+		},
+		"07": {
+			"type": "flt",
+			"ver": "0",
+			"data": "-1.156949"
+		},
+		"08": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"09": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"10": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"11": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"12": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"13": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		}
+	},
+	".alsconf": {
+		"owner": "sns_vd6281",
+		"00": {
+			"type": "flt",
+			"ver": "0",
+			"data": "0"
+		},
+		"01": {
+			"type": "flt",
+			"ver": "0",
+			"data": "30"
+		},
+		"02": {
+			"type": "flt",
+			"ver": "0",
+			"data": "200000"
+		},
+		"03": {
+			"type": "flt",
+			"ver": "0",
+			"data": "12800"
+		}
+	}
+  }
+}

@@ -1,0 +1,11 @@
+#
+# Copyright (c) 2017, 2021, 2023 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+service qteeconnector-hal-1-0 /vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
+    class early_hal
+    user system
+    group system
+    interface aidl vendor.qti.hardware.qteeconnector

@@ -1,0 +1,4 @@
+distance
+calories
+pedometer
+gps_tracker_sso

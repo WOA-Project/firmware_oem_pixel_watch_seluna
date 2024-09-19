@@ -1,0 +1,5 @@
+on post-fs-data
+    # Create directory used for dump collection
+    mkdir /data/vendor/ssrdump 0771 root system
+    # Create directory for the mcu_mgmtd to write WAC snapshots.
+    mkdir /data/vendor/ssrdump/wac_snapshots 0771 root system

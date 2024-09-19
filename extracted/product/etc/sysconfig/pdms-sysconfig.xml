@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Let "Pixel Device Management Service" run in the background and monitor
+         internet connectivity continuously. -->
+    <allow-in-power-save package="com.google.android.wearable.pixel.pdms" />
+    <allow-in-data-usage-save package="com.google.android.wearable.pixel.pdms" />
+
+    <feature name="com.google.android.wearable.pixel.pdms" />
+</config>

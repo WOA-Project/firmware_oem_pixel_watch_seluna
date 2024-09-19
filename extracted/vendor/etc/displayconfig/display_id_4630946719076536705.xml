@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<!-- Copyright (C) 2023 Google Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!-- Display configuration for BOE WJ014SGM -->
+<displayConfiguration>
+    <screenBrightnessMap interpolation="linear">
+        <point>
+            <value>0</value>
+            <nits>0.0</nits>
+        </point>
+        <point>
+            <value>0.4</value>
+            <nits>800.0</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>2000.0</nits>
+        </point>
+    </screenBrightnessMap>
+    <highBrightnessMode enabled="true">
+        <transitionPoint>0.4</transitionPoint>
+        <minimumLux>25000</minimumLux>
+        <timing>
+            <!-- allow for 30 seconds out of every 200 seconds -->
+            <timeWindowSecs>200</timeWindowSecs>
+            <timeMaxSecs>30</timeMaxSecs>
+            <timeMinSecs>3</timeMinSecs>
+        </timing>
+        <allowInLowPowerMode>false</allowInLowPowerMode>
+    </highBrightnessMode>
+    <ambientLightHorizonLong>5000</ambientLightHorizonLong>
+    <ambientLightHorizonShort>50</ambientLightHorizonShort>
+    <autoBrightness enabled="true">
+        <luxToBrightnessMapping>
+            <mode>default</mode>
+            <setting>normal</setting>
+            <map>
+                <point>
+                    <first>0</first>
+                    <second>0.001105</second> <!-- 2.210 nits -->
+                </point>
+                <point>
+                    <first>2</first>
+                    <second>0.001105</second> <!-- 2.210 nits -->
+                </point>
+                <point>
+                    <first>5</first>
+                    <second>0.002032</second> <!-- 4.063 nits -->
+                </point>
+                <point>
+                    <first>10</first>
+                    <second>0.004869</second> <!-- 9.738 nits -->
+                </point>
+                <point>
+                    <first>15</first>
+                    <second>0.017540</second> <!-- 35.079 nits -->
+                </point>
+                <point>
+                    <first>30</first>
+                    <second>0.024953</second> <!-- 49.905 nits -->
+                </point>
+                <point>
+                    <first>60</first>
+                    <second>0.034772</second> <!-- 69.544 nits -->
+                </point>
+                <point>
+                    <first>100</first>
+                    <second>0.047514</second> <!-- 95.027 nits -->
+                </point>
+                <point>
+                    <first>200</first>
+                    <second>0.061272</second> <!-- 122.544 nits -->
+                </point>
+                <point>
+                    <first>300</first>
+                    <second>0.078395</second> <!-- 156.790 nits -->
+                </point>
+                <point>
+                    <first>400</first>
+                    <second>0.094723</second> <!-- 189.446 nits -->
+                </point>
+                <point>
+                    <first>600</first>
+                    <second>0.128832</second> <!-- 257.664 nits -->
+                </point>
+                <point>
+                    <first>800</first>
+                    <second>0.162412</second> <!-- 324.824 nits -->
+                </point>
+                <point>
+                    <first>1000</first>
+                    <second>0.197953</second> <!-- 395.906 nits -->
+                </point>
+                <point>
+                    <first>2000</first>
+                    <second>0.212280</second> <!-- 424.560 nits -->
+                </point>
+                <point>
+                    <first>3000</first>
+                    <second>0.229691</second> <!-- 459.381 nits -->
+                </point>
+                <point>
+                    <first>4000</first>
+                    <second>0.245214</second> <!-- 490.428 nits -->
+                </point>
+                <point>
+                    <first>5000</first>
+                    <second>0.264031</second> <!-- 528.061 nits -->
+                </point>
+                <point>
+                    <first>6000</first>
+                    <second>0.280767</second> <!-- 561.533 nits -->
+                </point>
+                <point>
+                    <first>10000</first>
+                    <second>0.4</second> <!-- 800.000 nits -->
+                </point>
+                <point>
+                    <first>25000</first>
+                    <second>0.6</second> <!-- 1200.000 nits -->
+                </point>
+                <point>
+                    <first>80000</first>
+                    <second>0.75</second> <!-- 1500.000 nits -->
+                </point>
+                <point>
+                    <first>120000</first>
+                    <second>1.0</second> <!-- 2000.000 nits -->
+                </point>
+            </map>
+        </luxToBrightnessMapping>
+        <luxToBrightnessMapping>
+            <mode>default</mode>
+            <setting>dim</setting>
+            <map>
+                <point>
+                    <first>0</first>
+                    <second>0.001000</second> <!-- 2.000 nits -->
+                </point>
+                <point>
+                    <first>2</first>
+                    <second>0.001000</second> <!-- 2.000 nits -->
+                </point>
+                <point>
+                    <first>5</first>
+                    <second>0.001572</second> <!-- 3.144 nits -->
+                </point>
+                <point>
+                    <first>10</first>
+                    <second>0.003203</second> <!-- 6.406 nits -->
+                </point>
+                <point>
+                    <first>15</first>
+                    <second>0.009360</second> <!-- 18.719 nits -->
+                </point>
+                <point>
+                    <first>30</first>
+                    <second>0.013073</second> <!-- 26.145 nits -->
+                </point>
+                <point>
+                    <first>60</first>
+                    <second>0.019414</second> <!-- 38.827 nits -->
+                </point>
+                <point>
+                    <first>100</first>
+                    <second>0.027236</second> <!-- 54.472 nits -->
+                </point>
+                <point>
+                    <first>200</first>
+                    <second>0.037516</second> <!-- 75.032 nits -->
+                </point>
+                <point>
+                    <first>300</first>
+                    <second>0.049673</second> <!-- 99.345 nits -->
+                </point>
+                <point>
+                    <first>400</first>
+                    <second>0.058844</second> <!-- 117.688 nits -->
+                </point>
+                <point>
+                    <first>600</first>
+                    <second>0.076995</second> <!-- 153.989 nits -->
+                </point>
+                <point>
+                    <first>800</first>
+                    <second>0.094723</second> <!-- 189.446 nits -->
+                </point>
+                <point>
+                    <first>1000</first>
+                    <second>0.112770</second> <!-- 225.539 nits -->
+                </point>
+                <point>
+                    <first>2000</first>
+                    <second>0.170936</second> <!-- 341.872 nits -->
+                </point>
+                <point>
+                    <first>3000</first>
+                    <second>0.184173</second> <!-- 368.346 nits -->
+                </point>
+                <point>
+                    <first>4000</first>
+                    <second>0.197953</second> <!-- 395.906 nits -->
+                </point>
+                <point>
+                    <first>5000</first>
+                    <second>0.212280</second> <!-- 424.560 nits -->
+                </point>
+                <point>
+                    <first>6000</first>
+                    <second>0.229691</second> <!-- 459.381 nits -->
+                </point>
+                <point>
+                    <first>10000</first>
+                    <second>0.4</second> <!-- 800.000 nits -->
+                </point>
+                <point>
+                    <first>25000</first>
+                    <second>0.6</second> <!-- 1200.000 nits -->
+                </point>
+                <point>
+                    <first>80000</first>
+                    <second>0.75</second> <!-- 1500.000 nits -->
+                </point>
+                <point>
+                    <first>120000</first>
+                    <second>1.0</second> <!-- 2000.000 nits -->
+                </point>
+            </map>
+        </luxToBrightnessMapping>
+        <luxToBrightnessMapping>
+            <mode>default</mode>
+            <setting>bright</setting>
+            <map>
+                <point>
+                    <first>0</first>
+                    <second>0.001903</second> <!-- 3.806 nits -->
+                </point>
+                <point>
+                    <first>2</first>
+                    <second>0.001903</second> <!-- 3.806 nits -->
+                </point>
+                <point>
+                    <first>5</first>
+                    <second>0.004600</second> <!-- 9.199 nits -->
+                </point>
+                <point>
+                    <first>10</first>
+                    <second>0.007778</second> <!-- 15.556 nits -->
+                </point>
+                <point>
+                    <first>15</first>
+                    <second>0.022084</second> <!-- 44.168 nits -->
+                </point>
+                <point>
+                    <first>30</first>
+                    <second>0.040377</second> <!-- 80.754 nits -->
+                </point>
+                <point>
+                    <first>60</first>
+                    <second>0.056470</second> <!-- 112.940 nits -->
+                </point>
+                <point>
+                    <first>100</first>
+                    <second>0.078395</second> <!-- 156.790 nits -->
+                </point>
+                <point>
+                    <first>200</first>
+                    <second>0.094723</second> <!-- 189.446 nits -->
+                </point>
+                <point>
+                    <first>300</first>
+                    <second>0.116238</second> <!-- 232.475 nits -->
+                </point>
+                <point>
+                    <first>400</first>
+                    <second>0.158239</second> <!-- 316.478 nits -->
+                </point>
+                <point>
+                    <first>600</first>
+                    <second>0.200303</second> <!-- 400.605 nits -->
+                </point>
+                <point>
+                    <first>800</first>
+                    <second>0.242588</second> <!-- 485.176 nits -->
+                </point>
+                <point>
+                    <first>1000</first>
+                    <second>0.286471</second> <!-- 572.941 nits -->
+                </point>
+                <point>
+                    <first>2000</first>
+                    <second>0.312919</second> <!-- 625.837 nits -->
+                </point>
+                <point>
+                    <first>3000</first>
+                    <second>0.325085</second> <!-- 650.169 nits -->
+                </point>
+                <point>
+                    <first>4000</first>
+                    <second>0.337505</second> <!-- 675.009 nits -->
+                </point>
+                <point>
+                    <first>5000</first>
+                    <second>0.346987</second> <!-- 693.974 nits -->
+                </point>
+                <point>
+                    <first>6000</first>
+                    <second>0.359855</second> <!-- 719.709 nits -->
+                </point>
+                <point>
+                    <first>10000</first>
+                    <second>0.4</second> <!-- 800.000 nits -->
+                </point>
+                <point>
+                    <first>25000</first>
+                    <second>0.6</second> <!-- 1200.000 nits -->
+                </point>
+                <point>
+                    <first>80000</first>
+                    <second>0.75</second> <!-- 1500.000 nits -->
+                </point>
+                <point>
+                    <first>120000</first>
+                    <second>1.0</second> <!-- 2000.000 nits -->
+                </point>
+            </map>
+        </luxToBrightnessMapping>
+        <luxToBrightnessMapping>
+            <mode>doze</mode>
+            <setting>normal</setting>
+            <map>
+                <point>
+                    <first>0</first>
+                    <second>0.000500</second> <!-- 1.000 nits -->
+                </point>
+                <point>
+                    <first>2</first>
+                    <second>0.000500</second> <!-- 1.000 nits -->
+                </point>
+                <point>
+                    <first>5</first>
+                    <second>0.001033</second> <!-- 2.066 nits -->
+                </point>
+                <point>
+                    <first>10</first>
+                    <second>0.001566</second> <!-- 3.132 nits -->
+                </point>
+                <point>
+                    <first>15</first>
+                    <second>0.004183</second> <!-- 8.366 nits -->
+                </point>
+                <point>
+                    <first>30</first>
+                    <second>0.006974</second> <!-- 13.948 nits -->
+                </point>
+                <point>
+                    <first>60</first>
+                    <second>0.012932</second> <!-- 25.864 nits -->
+                </point>
+                <point>
+                    <first>100</first>
+                    <second>0.020733</second> <!-- 41.465 nits -->
+                </point>
+                <point>
+                    <first>200</first>
+                    <second>0.024716</second> <!-- 49.431 nits -->
+                </point>
+                <point>
+                    <first>300</first>
+                    <second>0.028335</second> <!-- 56.669 nits -->
+                </point>
+                <point>
+                    <first>400</first>
+                    <second>0.031828</second> <!-- 63.656 nits -->
+                </point>
+                <point>
+                    <first>600</first>
+                    <second>0.040406</second> <!-- 80.811 nits -->
+                </point>
+                <point>
+                    <first>800</first>
+                    <second>0.048594</second> <!-- 97.188 nits -->
+                </point>
+                <point>
+                    <first>1000</first>
+                    <second>0.056516</second> <!-- 113.032 nits -->
+                </point>
+                <point>
+                    <first>2000</first>
+                    <second>0.059871</second> <!-- 119.741 nits -->
+                </point>
+                <point>
+                    <first>3000</first>
+                    <second>0.063331</second> <!-- 126.662 nits -->
+                </point>
+                <point>
+                    <first>4000</first>
+                    <second>0.067504</second> <!-- 135.008 nits -->
+                </point>
+                <point>
+                    <first>5000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>6000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>10000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+            </map>
+        </luxToBrightnessMapping>
+        <luxToBrightnessMapping>
+            <mode>doze</mode>
+            <setting>dim</setting>
+            <map>
+                <point>
+                    <first>0</first>
+                    <second>0.000500</second> <!-- 1.000 nits -->
+                </point>
+                <point>
+                    <first>2</first>
+                    <second>0.000500</second> <!-- 1.000 nits -->
+                </point>
+                <point>
+                    <first>5</first>
+                    <second>0.000776</second> <!-- 1.551 nits -->
+                </point>
+                <point>
+                    <first>10</first>
+                    <second>0.001275</second> <!-- 2.549 nits -->
+                </point>
+                <point>
+                    <first>15</first>
+                    <second>0.003050</second> <!-- 6.100 nits -->
+                </point>
+                <point>
+                    <first>30</first>
+                    <second>0.006000</second> <!-- 12.000 nits -->
+                </point>
+                <point>
+                    <first>60</first>
+                    <second>0.009385</second> <!-- 18.770 nits -->
+                </point>
+                <point>
+                    <first>100</first>
+                    <second>0.012453</second> <!-- 24.906 nits -->
+                </point>
+                <point>
+                    <first>200</first>
+                    <second>0.015215</second> <!-- 30.430 nits -->
+                </point>
+                <point>
+                    <first>300</first>
+                    <second>0.016023</second> <!-- 32.046 nits -->
+                </point>
+                <point>
+                    <first>400</first>
+                    <second>0.016854</second> <!-- 33.708 nits -->
+                </point>
+                <point>
+                    <first>600</first>
+                    <second>0.021050</second> <!-- 42.099 nits -->
+                </point>
+                <point>
+                    <first>800</first>
+                    <second>0.025417</second> <!-- 50.834 nits -->
+                </point>
+                <point>
+                    <first>1000</first>
+                    <second>0.030248</second> <!-- 60.495 nits -->
+                </point>
+                <point>
+                    <first>2000</first>
+                    <second>0.035548</second> <!-- 71.096 nits -->
+                </point>
+                <point>
+                    <first>3000</first>
+                    <second>0.041790</second> <!-- 83.580 nits -->
+                </point>
+                <point>
+                    <first>4000</first>
+                    <second>0.049612</second> <!-- 99.224 nits -->
+                </point>
+                <point>
+                    <first>5000</first>
+                    <second>0.058180</second> <!-- 116.360 nits -->
+                </point>
+                <point>
+                    <first>6000</first>
+                    <second>0.068724</second> <!-- 137.447 nits -->
+                </point>
+                <point>
+                    <first>10000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+            </map>
+        </luxToBrightnessMapping>
+        <luxToBrightnessMapping>
+            <mode>doze</mode>
+            <setting>bright</setting>
+            <map>
+                <point>
+                    <first>0</first>
+                    <second>0.000991</second> <!-- 1.981 nits -->
+                </point>
+                <point>
+                    <first>2</first>
+                    <second>0.000991</second> <!-- 1.981 nits -->
+                </point>
+                <point>
+                    <first>5</first>
+                    <second>0.003050</second> <!-- 6.100 nits -->
+                </point>
+                <point>
+                    <first>10</first>
+                    <second>0.006000</second> <!-- 12.000 nits -->
+                </point>
+                <point>
+                    <first>15</first>
+                    <second>0.012453</second> <!-- 24.906 nits -->
+                </point>
+                <point>
+                    <first>30</first>
+                    <second>0.020107</second> <!-- 40.213 nits -->
+                </point>
+                <point>
+                    <first>60</first>
+                    <second>0.022675</second> <!-- 45.350 nits -->
+                </point>
+                <point>
+                    <first>100</first>
+                    <second>0.025417</second> <!-- 50.834 nits -->
+                </point>
+                <point>
+                    <first>200</first>
+                    <second>0.039950</second> <!-- 79.899 nits -->
+                </point>
+                <point>
+                    <first>300</first>
+                    <second>0.042728</second> <!-- 85.455 nits -->
+                </point>
+                <point>
+                    <first>400</first>
+                    <second>0.045121</second> <!-- 90.242 nits -->
+                </point>
+                <point>
+                    <first>600</first>
+                    <second>0.054879</second> <!-- 109.758 nits -->
+                </point>
+                <point>
+                    <first>800</first>
+                    <second>0.063918</second> <!-- 127.836 nits -->
+                </point>
+                <point>
+                    <first>1000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>2000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>3000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>4000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>5000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>6000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+                <point>
+                    <first>10000</first>
+                    <second>0.075</second> <!-- 150.000 nits -->
+                </point>
+            </map>
+        </luxToBrightnessMapping>
+    </autoBrightness>
+</displayConfiguration>

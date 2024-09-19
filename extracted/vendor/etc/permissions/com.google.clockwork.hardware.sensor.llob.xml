@@ -1,0 +1,3 @@
+<permissions>
+    <feature name="com.google.clockwork.hardware.sensor.llob" />
+</permissions>

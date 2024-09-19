@@ -1,0 +1,16 @@
+service vendor.wristorientation-hal-1-0 /vendor/bin/hw/vendor.google_clockwork.wristorientation@1.0-service
+    class hal
+    user system
+    group system
+
+# Note: this trigger is for debug purposes only
+on property:vendor.blhost.fw.download.complete=true
+    start vendor.wristorientation-hal-1-0
+
+service vendor.wrist_orientation_set /vendor/bin/misc_writer --set-wrist-orientation ${persist.sys.wrist_orientation}
+    disabled
+    oneshot
+
+on property:persist.sys.wrist_orientation=*
+    start vendor.wrist_orientation_set
+

@@ -1,0 +1,13 @@
+############################################################################
+#
+#Copyright (c) 2022, Qualcomm Technologies, Inc.
+#All Rights Reserved.
+#Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+###########################################################################
+
+service displayoffload-hal-2-0 /vendor/bin/hw/vendor.qti.hardware.displayoffload@2.0-service
+    class hal
+    user system
+    group system wakelock
+    capabilities BLOCK_SUSPEND

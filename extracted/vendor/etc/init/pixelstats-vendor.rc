@@ -1,0 +1,7 @@
+on post-fs
+    start pixelstats_vendor
+
+service pixelstats_vendor /vendor/bin/pixelstats-vendor
+    class hal
+    user system
+    group system context_hub readproc

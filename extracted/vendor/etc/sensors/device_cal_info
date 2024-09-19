@@ -1,0 +1,97 @@
+#!/system/bin/sh
+#
+# Copyright 2023 Google LLC. All Rights Reserved.
+#
+# WAC Calibration Sub-Script.
+#
+# Contains R11 and Eos sensor information for sensor_cal.
+
+SUPPORTED_SENSORS="accel light baro gyro imu_temp mag mag_temp"
+
+#######################################
+# Converts a sensor name to its path.
+# Globals:
+#   CAL_PARAMS
+#   SENSOR
+#   SENSOR_PATH
+#   SENSOR_NAME
+# Arguments:
+#   None
+# Outputs:
+#   Saves the sensor path in SENSOR_PATH.
+#   Logging based on set VERBOSITY level.
+#######################################
+sensor_cal::sensor_to_path() {
+  if [[ "${SENSOR}" == "accel" ]]; then
+    if [ -z "$IMU_CHIP_PART_ID" ]; then
+      source /vendor/bin/sensors/imu_finder
+      find_imu_sensor_name
+    fi
+    echo "IMU: $IMU_CHIP_PART_ID"
+    SENSOR_PATH="/fac_cal/dev/$IMU_CHIP_PART_ID/0/accel"
+    SENSOR_NAME="$IMU_CHIP_PART_ID"
+    CAL_PARAMS="fac_cal_transform temp"
+  elif [[ "${SENSOR}" == "baro" ]]; then
+    CAL_PARAMS="fac_cal_transform"
+    if sensor_test list | grep -q ICP101; then
+      echo "Barometer: ICP10101"
+      SENSOR_PATH="/fac_cal/dev/icp10101/0/baro"
+      SENSOR_NAME="icp10101"
+    elif sensor_test info 6 | grep -q Goer; then
+      echo "Barometer: CDPB22"
+      SENSOR_PATH="/fac_cal/dev/cdpb22/0/pressure"
+      SENSOR_NAME="cdpb22"
+    else
+      echo "Barometer: LPS27HHW"
+      SENSOR_PATH="/fac_cal/dev/lps27hhw/0/baro"
+      SENSOR_NAME="lps27hhw"
+    fi
+  elif [[ "${SENSOR}" == "gyro" ]]; then
+    if [ -z "$IMU_CHIP_PART_ID" ]; then
+      source /vendor/bin/sensors/imu_finder
+      find_imu_sensor_name
+    fi
+    echo "IMU: $IMU_CHIP_PART_ID"
+    SENSOR_PATH="/fac_cal/dev/$IMU_CHIP_PART_ID/0/gyro"
+    SENSOR_NAME="$IMU_CHIP_PART_ID"
+    CAL_PARAMS="fac_cal_transform temp"
+  elif [[ "${SENSOR}" == "imu_temp" ]]; then
+    if [ -z "$IMU_CHIP_PART_ID" ]; then
+      source /vendor/bin/sensors/imu_finder
+      find_imu_sensor_name
+    fi
+    echo "IMU: $IMU_CHIP_PART_ID"
+    SENSOR_PATH="/fac_cal/dev/$IMU_CHIP_PART_ID/0/temp"
+    SENSOR_NAME="$IMU_CHIP_PART_ID"
+    CAL_PARAMS=" "
+  elif [[ "${SENSOR}" == "mag" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lis2mdl/0/mag"
+    SENSOR_NAME="lis2mdl"
+    CAL_PARAMS="fac_cal_transform temp"
+  elif [[ "${SENSOR}" == "mag_temp" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lis2mdl/0/temp"
+    SENSOR_NAME="lis2mdl"
+    CAL_PARAMS="fac_cal_transform temp"
+  elif [[ "${SENSOR}" == "light" ]]; then
+    SENSOR_PATH="/fac_cal/dev/tcs3701/0/light"
+    SENSOR_NAME="tcs3701"
+    CAL_PARAMS=" \
+      r_coeff g_coeff b_coeff c_coeff \
+      r_gain_ratio_4 g_gain_ratio_4 b_gain_ratio_4 c_gain_ratio_4 \
+      r_gain_ratio_5 g_gain_ratio_5 b_gain_ratio_5 c_gain_ratio_5 \
+      r_gain_ratio_6 g_gain_ratio_6 b_gain_ratio_6 c_gain_ratio_6 \
+      r_gain_ratio_7 g_gain_ratio_7 b_gain_ratio_7 c_gain_ratio_7 \
+      r_gain_ratio_8 g_gain_ratio_8 b_gain_ratio_8 c_gain_ratio_8 \
+      r_gain_ratio_9 g_gain_ratio_9 b_gain_ratio_9 c_gain_ratio_9 \
+      r_gain_ratio_10 g_gain_ratio_10 b_gain_ratio_10 c_gain_ratio_10 \
+      r_gain_ratio_11 g_gain_ratio_11 b_gain_ratio_11 c_gain_ratio_11 \
+      r_gain_ratio_12 g_gain_ratio_12 b_gain_ratio_12 c_gain_ratio_12 \
+      aod_delay_ns default_gain delay_ns enable_autogain lux_scale \
+      disp_vendor"
+  else
+    sensor_cal::ERROR "Unknown or unimplemented sensor: ${SENSOR}"
+    sensor_cal::exit_badparam
+  fi
+
+  sensor_cal::DEBUG "Registry path: ${SENSOR_PATH}"
+}

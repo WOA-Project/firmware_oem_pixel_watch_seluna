@@ -1,0 +1,96 @@
+{
+  "config":
+  {
+    "hw_platform": ["MTP", "IOT", "QRD", "RCM", "IDP", "WDP"],
+    "soc_id": ["486", "517"],
+    "platform_subtype_id": ["0"]
+  },
+  "sns_sensors_aon":
+  {
+    "owner":"sns_aon",
+    "accel":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "gyro":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "sensor_temperature":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "pressure":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "mag":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "amd":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "ambient_light":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "offbody_detect":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "ppg":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "motion_detect":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "gyro_cal":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "mag_cal":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "wrist_tilt_gesture":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    },
+    "pedometer":
+    {
+      "type" : "int",
+      "ver" : "0",
+      "data" : "1"
+    }
+  }
+}

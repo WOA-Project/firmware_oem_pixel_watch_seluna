@@ -1,0 +1,3 @@
+on early-boot
+    # RPM sleep stats
+    chown system system /dev/stats

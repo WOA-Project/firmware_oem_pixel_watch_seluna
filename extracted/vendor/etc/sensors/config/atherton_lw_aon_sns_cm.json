@@ -1,0 +1,68 @@
+{
+  "config": {
+    "hw_platform": ["MTP", "IOT", "QRD", "RCM", "IDP", "WDP"],
+    "soc_id": ["486", "517"],
+    "platform_subtype_id": ["0"]
+  },
+  "sns_cm_aon": {
+    "owner": "sns_cm_aon",
+    "heap_size": {
+      "type": "int",
+      "ver": "0",
+      "data": "65536"
+    },
+    "max_batch_disabled": {
+      "type": "int",
+      "ver": "0",
+      "data": "0"
+    },
+    "min_batch_period_thrshld_ms": {
+      "type": "int",
+      "ver": "0",
+      "data": "10"
+    }
+  },
+  "sns_aon_ds_oda": {
+    "owner": "sns_aon_ds_oda",
+    "oda_support": {
+      "type": "int",
+      "ver": "0",
+      "data": "1"
+    },
+    "ds_min_batch_period_sec": {
+      "type": "int",
+      "ver": "0",
+      "data": "120"
+    },
+    "ds_allow_streaming_clients": {
+      "type": "int",
+      "ver": "0",
+      "data": "0"
+    },
+    "oda_emmc_size_kB": {
+      "type": "int",
+      "ver": "0",
+      "data": "5120"
+    },
+    "oda_emmc_start_addr": {
+      "type": "int",
+      "ver": "0",
+      "data": "7208960"
+    },
+    "oda_emmc_phy_partn_num": {
+      "type": "int",
+      "ver": "0",
+      "data": "0"
+    },
+    "oda_emmc_drive_num": {
+      "type": "int",
+      "ver": "0",
+      "data": "0"
+    },
+    "oda_debug_enable": {
+      "type": "int",
+      "ver": "0",
+      "data": "0"
+    }
+  }
+}

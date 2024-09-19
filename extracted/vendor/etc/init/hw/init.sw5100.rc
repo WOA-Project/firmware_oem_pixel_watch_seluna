@@ -1,0 +1,385 @@
+# Copyright (c) 2018-2019, 2021, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+# Changes from Qualcomm Innovation Center are provided under the following license:
+#
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted (subject to the limitations in the
+# disclaimer below) provided that the following conditions are met:
+#   * Redistributions of source code must retain the above copyright
+#     notice, this list of conditions and the following disclaimer.
+#   * Redistributions in binary form must reproduce the above
+#     copyright notice, this list of conditions and the following
+#     disclaimer in the documentation and/or other materials provided
+#     with the distribution.
+#   * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+#     contributors may be used to endorse or promote products derived
+#     from this software without specific prior written permission.
+
+# NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+# GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+# HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+# IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
+#
+
+import /vendor/etc/init/hw/init.qti.kernel.rc
+import /vendor/etc/init/hw/init.${ro.boot.hardware.platform}.usb.rc
+import /vendor/etc/init/hw/init.${ro.boot.hardware.platform}.diag.rc
+import /vendor/etc/init/hw/init.${ro.boot.hardware.platform}.chg.rc
+
+on early-init
+    write /proc/sys/kernel/sched_boost 1
+    mount_all /vendor/etc/fstab.persist --early
+
+service insmod_sh_device /vendor/bin/insmod.sh /vendor/etc/init.insmod.${ro.hardware}.cfg
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on init
+    write /dev/stune/foreground/schedtune.sched_boost_no_override 1
+    write /dev/stune/top-app/schedtune.sched_boost_no_override 1
+    write /dev/stune/schedtune.colocate 0
+    write /dev/stune/background/schedtune.colocate 0
+    write /dev/stune/system-background/schedtune.colocate 0
+    write /dev/stune/foreground/schedtune.colocate 0
+    write /dev/stune/top-app/schedtune.colocate 1
+    #Moving to init as this is needed for qseecomd
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    start vendor.qseecomd
+    start keymaster-4-0
+
+    # logbuffer
+    chown system system /dev/logbuffer_ssoc
+    chown system system /dev/logbuffer_ttf
+
+    # Some user code relies on ro.boot.hardware.revision
+    setprop ro.boot.hardware.revision ${ro.revision}
+
+    # Allow PAI targeting per hardware SKU
+    setprop ro.oem.key1 ${ro.boot.hardware.sku}
+
+    # Property used by vintf for sku specific manifests
+    # Property used by NFC for sku specific configurations
+    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
+
+    # Some Wear platform code relies on oem.sku
+    setprop ro.oem.sku ${ro.boot.hardware.sku}
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
+# primary_display_orientation has to be set before surfaceflinger starts in late-init.
+on init && property:ro.boot.primary_display_orientation=90
+    setprop ro.surface_flinger.primary_display_orientation ORIENTATION_90
+
+on init && property:ro.boot.primary_display_orientation=180
+    setprop ro.surface_flinger.primary_display_orientation ORIENTATION_180
+
+on init && property:ro.boot.primary_display_orientation=270
+    setprop ro.surface_flinger.primary_display_orientation ORIENTATION_270
+
+on early-fs
+    start vold
+
+on fs
+    start hwservicemanager
+    mount_all /vendor/etc/fstab.${ro.boot.hardware.platform} --early
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/battery 0700 system system
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/sensors 0755 system system
+    mkdir /mnt/vendor/persist/sensors/registry 0755 system system
+
+    # Permission for time sync nanohub.
+    chown system system /sys/class/nanohub/nanohub_comms/time_sync
+
+    # walt scheduler overrides
+    # disable panic on walt bug
+    write /proc/sys/walt/panic_on_walt_bug 0x4544DE30
+
+on post-fs
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
+
+on late-fs
+    wait_for_prop hwservicemanager.ready true
+    exec_start wait_for_keymaster
+    mount_all /vendor/etc/fstab.${ro.boot.hardware.platform} --late
+
+on post-fs-data
+    mkdir /vendor/data/tombstones 0771 system system
+    mkdir /data/vendor/tloc 0700 system drmrpc
+
+    # Create the directories used by the Wireless subsystem
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/sockets 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+
+    #Create directories for wifihal services
+    mkdir /dev/socket/wifihal 0770 wifi wifi
+    chmod 2770 /dev/socket/wifihal
+
+on early-boot
+    # Wait for insmod_sh to finish all common modules
+    wait_for_prop vendor.common.modules.ready 1
+    start insmod_sh_device
+    # Wait for insmod_sh to finish all device specific modules
+    wait_for_prop vendor.device.modules.ready 1
+
+    start vendor.sensors
+
+on boot
+#USB controller configuration
+    setprop vendor.usb.rndis.func.name "gsi"
+    setprop vendor.usb.rmnet.func.name "gsi"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
+    setprop vendor.usb.qdss.inst.name "qdss_mdm"
+    setprop vendor.usb.controller 4e00000.dwc3
+
+#Set wifi interface
+    setprop wifi.interface wlan0
+
+#Default country code
+    setprop ro.boot.wificountrycode 00
+
+# Charger
+    chown system system /mnt/vendor/persist/battery/defender_charger_time
+    chown system system /mnt/vendor/persist/battery/defender_active_time
+    chown system system /sys/devices/platform/soc/soc:google,charger/charge_start_level
+    chown system system /sys/devices/platform/soc/soc:google,charger/charge_stop_level
+    # Enable age adjusted charge rate
+    write /sys/class/power_supply/google_battery/aacr_state 1
+    write /sys/class/power_supply/google_battery/aacr_cycle_max 500
+    write /sys/class/power_supply/google_battery/aacr_cycle_grace 5
+
+# Nanohub wake min duration
+    write /sys/devices/virtual/nanohub/nanohub_comms/wakeup_event_msec 0
+
+on boot && property:persist.vendor.usb.controller.default=*
+    setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
+
+on property:vendor.usb.controller=*
+    setprop sys.usb.controller ${vendor.usb.controller}
+
+on charger
+    mount_all /vendor/etc/qbg_coproc_fstab.qti --early
+    start vendor.power_off_alarm
+    setprop vendor.usb.controller 4e00000.dwc3
+    setprop sys.usb.configfs 1
+
+#pd-mapper
+service vendor.pd_mapper /vendor/bin/pd-mapper
+    class core
+    user system
+    group system
+
+#Peripheral manager
+service vendor.per_mgr /vendor/bin/pm-service
+    class core
+    user system
+    group system
+    ioprio rt 4
+
+service vendor.per_proxy /vendor/bin/pm-proxy
+    class core
+    user system
+    group system
+    disabled
+
+service vendor.mdm_helper /vendor/bin/mdm_helper
+    class core
+    group system wakelock
+    disabled
+
+service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
+    class core
+    oneshot
+
+on property:init.svc.vendor.per_mgr=running
+    start vendor.per_proxy
+
+on property:sys.shutdown.requested=*
+    stop vendor.per_proxy
+
+service vendor.tlocd /vendor/bin/tloc_daemon
+    class late_start
+    user system
+    group drmrpc gps net_raw
+
+service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
+   class main
+   user system
+   group system wifi inet sdcard_rw media_rw diag
+   disabled
+   oneshot
+
+# NFC
+on property:ro.boot.cdt_hwid=""
+    setprop persist.vendor.nfc.config_file_name libnfc-nxp.nffv1.conf
+on property:ro.boot.cdt_hwid=0x00020401000100000000000000000000
+    setprop persist.vendor.nfc.config_file_name libnfc-nxp.nffv1.conf
+on property:ro.boot.cdt_hwid=0x00020401000100000100000000000000
+    setprop persist.vendor.nfc.config_file_name libnfc-nxp.nffv1.conf
+on property:ro.boot.cdt_hwid=0x00020401000101000000000000000000
+    setprop persist.vendor.nfc.config_file_name libnfc-nxp.nffv1.conf
+on property:ro.boot.cdt_hwid=0x00020401000101000100000000000000
+    setprop persist.vendor.nfc.config_file_name libnfc-nxp.nffv1.conf
+
+# WiFi
+service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
+    class late_start
+    user system
+    group system inet net_admin wifi
+    capabilities NET_ADMIN
+
+on property:persist.vendor.charge.stop.level=*
+    write /sys/devices/platform/soc/soc:google,charger/charge_stop_level ${persist.vendor.charge.stop.level}
+
+on property:persist.vendor.charge.start.level=*
+    write /sys/devices/platform/soc/soc:google,charger/charge_start_level ${persist.vendor.charge.start.level}
+
+on post-fs-data && property:persist.vendor.ssr.enable_ramdumps=1
+    mkdir /data/vendor/ssrlog 775 root system
+
+on property:vendor.thermal.link_ready=1
+    chown system system /dev/thermal/tz-by-name/sdm-skin-therm-usr/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/sdm-skin-therm-usr/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/sdm-skin-therm-usr/trip_point_0_type
+    chown system system /dev/thermal/tz-by-name/audio-therm-usr/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/audio-therm-usr/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/audio-therm-usr/trip_point_0_type
+    chown system system /dev/thermal/tz-by-name/gpu-step/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/gpu-step/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/gpu-step/trip_point_0_type
+    chown system system /dev/thermal/tz-by-name/cpuss-0-step/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/cpuss-0-step/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/cpuss-0-step/trip_point_0_type
+    chown system system /dev/thermal/tz-by-name/cpuss-1-step/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/cpuss-1-step/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/cpuss-1-step/trip_point_0_type
+    chown system system /dev/thermal/tz-by-name/mdm-0-step/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/mdm-0-step/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/mdm-0-step/trip_point_0_type
+    chown system system /dev/thermal/tz-by-name/mdm-1-step/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/mdm-1-step/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/mdm-1-step/trip_point_0_type
+    chown system system /dev/thermal/tz-by-name/wlan-usr/trip_point_0_temp
+    chown system system /dev/thermal/tz-by-name/wlan-usr/trip_point_0_hyst
+    chown system system /dev/thermal/tz-by-name/wlan-usr/trip_point_0_type
+
+on property:vendor.device.modules.ready=1
+    # Permission for High Brightness Mode
+    chmod 0660 /sys/class/backlight/panel0-backlight/hbm
+    chown system system /sys/class/backlight/panel0-backlight/hbm
+
+on property:persist.vendor.ssr.restart_level=modem && property:ro.kernel.version=5.15
+    setprop persist.vendor.ssr.restart_level mss
+
+on property:persist.vendor.ssr.restart_level=mss && property:ro.kernel.version=5.4
+    setprop persist.vendor.ssr.restart_level modem
+
+# BootReceiver tracing instance
+# The main users of this instance are KFENCE and MTE-aided KASAN, which are only
+# supported on arm64. The system init script (system/core/rootdir/init.rc) uses
+# userspace bitness as a hint to whether to create this instance, so that it can
+# avoid the ~6Mb memory overhead on low-end devices. This restriction affects
+# the wear devices as we use 32-bit userspace, but this instance is still useful
+# since we use 64-bit kernel and KFENCE.
+# Complement the condition from the system init script, so that a bootreceiver
+# tracing instance is still created for our 32-bit userspace devices.
+on property:ro.product.cpu.abilist32=* && property:bootreceiver.enable=1
+    # Set up a tracing instance for system_server to monitor error_report_end
+    # events. These are sent by kernel tools like KASAN and KFENCE when a memory
+    # corruption is detected.
+    mkdir /sys/kernel/tracing/instances/bootreceiver 0700 system system
+    restorecon_recursive /sys/kernel/tracing/instances/bootreceiver
+    write /sys/kernel/tracing/instances/bootreceiver/buffer_size_kb 1
+    write /sys/kernel/tracing/instances/bootreceiver/trace_options disable_on_free
+    write /sys/kernel/tracing/instances/bootreceiver/events/error_report/error_report_end/enable 1
+
+service vendor.timeoffset_set /vendor/bin/misc_writer --set-timeoffset ${persist.sys.time.offset}
+    disabled
+    oneshot
+
+service vendor.timeformat_set /vendor/bin/misc_writer --set-timeformat ${persist.sys.time.format}
+    disabled
+    oneshot
+
+service vendor.timertcoffset_set /vendor/bin/misc_writer --set-timertcoffset ${persist.vendor.time_rtc_offset}
+    disabled
+    oneshot
+
+service vendor.minrtc_set /vendor/bin/misc_writer --set-minrtc ${persist.vendor.min_rtc}
+    disabled
+    oneshot
+
+service vendor.dst_transition /vendor/bin/misc_writer --set-dsttransition ${persist.sys.time.dst_transition}
+    disabled
+    oneshot
+
+service vendor.dst_offset /vendor/bin/misc_writer --set-dstoffset ${persist.sys.time.dst_offset}
+    disabled
+    oneshot
+
+on property:persist.sys.time.offset=*
+    start vendor.timeoffset_set
+
+on property:persist.sys.time.format=*
+    start vendor.timeformat_set
+
+on property:persist.vendor.time_rtc_offset=*
+    start vendor.timertcoffset_set
+
+on property:persist.vendor.min_rtc=*
+    start vendor.minrtc_set
+
+on property:persist.sys.time.dst_transition=*
+    start vendor.dst_transition
+
+on property:persist.sys.time.dst_offset=*
+    start vendor.dst_offset

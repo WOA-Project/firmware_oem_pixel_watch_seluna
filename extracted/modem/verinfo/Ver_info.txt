@@ -1,0 +1,19 @@
+{
+    "Image_Build_IDs": {
+        "adsp": "ADSP.IT.2.1-00139-ATHERTON-1",
+        "apps": "LW.UM.2.3.r1-02700-SW5100.0-1",
+        "boot": "BOOT.XF.4.3-00248-ATHERTONLAZ-2",
+        "common": ".",
+        "glue": "GLUE.ATHERTON_LW.2.0-00083-NOOP_TEST-1",
+        "modem": "MPSS.HA.2.0.1-00111-ATHERTON_GEN_PACK-1",
+        "rpm": "RPM.BF.1.12-00107-ATHERTONAAAAANAZR-1",
+        "tz": "TZ.XF.5.1.5-00346-ATHERTONAAAANBZT-1",
+        "tz_apps": "TZ.APPS.2.0.1-00120-KAMORTAAAAAANAZT-2"
+    },
+    "Metabuild_Info": {
+        "Meta_Build_ID": ".",
+        "Product_Flavor": "asic",
+        "Time_Stamp": "2024-07-10 17:07:23"
+    },
+    "Version": "1.0"
+}

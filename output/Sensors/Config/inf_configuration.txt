@@ -1,0 +1,509 @@
+sns_wrist_pedo.json = 13
+sns_tilt_to_wake.json = 13
+sns_tilt_sw_enabled.json = 13
+sns_tilt_sw_disabled.json = 13
+sns_tilt.json = 13
+sns_smd.json = 13
+sns_rotv.json = 13
+sns_rmd.json = 13
+sns_reg_config = 13
+sns_pedometer.json = 13
+sns_multishake.json = 13
+sns_mag_cal_legacy.json = 13
+sns_mag_cal.json = 13
+sns_heart_rate.json = 13
+sns_gyro_cal.json = 13
+sns_geomag_rv.json = 13
+sns_fmv_legacy.json = 13
+sns_fmv.json = 13
+sns_facing.json = 13
+sns_dpc.json = 13
+sns_distance_bound.json = 13
+sns_direct_channel.json = 13
+sns_diag_filter.json = 13
+sns_device_orient.json = 13
+sns_dae.json = 13
+sns_cm.json = 13
+sns_ccd_v4_0_te_cd_regs.json = 13
+sns_ccd_v4_0_sensors.json = 13
+sns_ccd_v3_1_walk.json = 13
+sns_ccd_v3_0_walk.json = 13
+sns_ccd_v2_0_walk.json = 13
+sns_ccd_v1_0_ttw.json = 13
+sns_ccd_v1_0_amd.json = 13
+sns_bring_to_ear.json = 13
+sns_basic_gestures.json = 13
+sns_aont.json = 13
+sns_amd_sw_enabled.json = 13
+sns_amd_sw_disabled.json = 13
+sns_amd.json = 13
+atherton_wrist_tilt.json = 13
+atherton_wrist_pedo.json = 13
+atherton_vd6281_0.json = 13
+atherton_pah_815x_reg_0.json = 13
+atherton_mmc56x3x_0.json = 13
+atherton_lw_wdp_lsm6dst_0.json = 13
+atherton_lw_wdp_ak991x_0.json = 13
+atherton_lw_pah_815x_0.json = 13
+atherton_lw_ltr308_0.json = 13
+atherton_lw_lsm6dst_0.json = 13
+atherton_lw_lps22df_0.json = 13
+atherton_lw_aon_sns_cm.json = 13
+atherton_lw_aon_sensors_avail_adsp.json = 13
+atherton_lw_ak991x_0.json = 13
+atherton_law_wdp_lsm6dst_0.json = 13
+atherton_law_wdp_ak991x_0.json = 13
+atherton_law_power_0.json = 13
+atherton_law_pah_815x_0.json = 13
+atherton_law_ltr308_0.json = 13
+atherton_law_lsm6dst_0.json = 13
+atherton_law_lps22df_0.json = 13
+atherton_law_ak991x_0.json = 13
+atherton_icm4x6xx_0.json = 13
+
+-------------------------------
+
+sns_wrist_pedo.json = 1,
+sns_tilt_to_wake.json = 1,
+sns_tilt_sw_enabled.json = 1,
+sns_tilt_sw_disabled.json = 1,
+sns_tilt.json = 1,
+sns_smd.json = 1,
+sns_rotv.json = 1,
+sns_rmd.json = 1,
+sns_reg_config = 1,
+sns_pedometer.json = 1,
+sns_multishake.json = 1,
+sns_mag_cal_legacy.json = 1,
+sns_mag_cal.json = 1,
+sns_heart_rate.json = 1,
+sns_gyro_cal.json = 1,
+sns_geomag_rv.json = 1,
+sns_fmv_legacy.json = 1,
+sns_fmv.json = 1,
+sns_facing.json = 1,
+sns_dpc.json = 1,
+sns_distance_bound.json = 1,
+sns_direct_channel.json = 1,
+sns_diag_filter.json = 1,
+sns_device_orient.json = 1,
+sns_dae.json = 1,
+sns_cm.json = 1,
+sns_ccd_v4_0_te_cd_regs.json = 1,
+sns_ccd_v4_0_sensors.json = 1,
+sns_ccd_v3_1_walk.json = 1,
+sns_ccd_v3_0_walk.json = 1,
+sns_ccd_v2_0_walk.json = 1,
+sns_ccd_v1_0_ttw.json = 1,
+sns_ccd_v1_0_amd.json = 1,
+sns_bring_to_ear.json = 1,
+sns_basic_gestures.json = 1,
+sns_aont.json = 1,
+sns_amd_sw_enabled.json = 1,
+sns_amd_sw_disabled.json = 1,
+sns_amd.json = 1,
+atherton_wrist_tilt.json = 1,
+atherton_wrist_pedo.json = 1,
+atherton_vd6281_0.json = 1,
+atherton_pah_815x_reg_0.json = 1,
+atherton_mmc56x3x_0.json = 1,
+atherton_lw_wdp_lsm6dst_0.json = 1,
+atherton_lw_wdp_ak991x_0.json = 1,
+atherton_lw_pah_815x_0.json = 1,
+atherton_lw_ltr308_0.json = 1,
+atherton_lw_lsm6dst_0.json = 1,
+atherton_lw_lps22df_0.json = 1,
+atherton_lw_aon_sns_cm.json = 1,
+atherton_lw_aon_sensors_avail_adsp.json = 1,
+atherton_lw_ak991x_0.json = 1,
+atherton_law_wdp_lsm6dst_0.json = 1,
+atherton_law_wdp_ak991x_0.json = 1,
+atherton_law_power_0.json = 1,
+atherton_law_pah_815x_0.json = 1,
+atherton_law_ltr308_0.json = 1,
+atherton_law_lsm6dst_0.json = 1,
+atherton_law_lps22df_0.json = 1,
+atherton_law_ak991x_0.json = 1,
+atherton_icm4x6xx_0.json = 1,
+
+-------------------------------
+
+CopyFiles=sns_wrist_pedo.json,sns_tilt_to_wake.json,sns_tilt_sw_enabled.json,sns_tilt_sw_disabled.json,sns_tilt.json,sns_smd.json,sns_rotv.json,sns_rmd.json,sns_reg_config,sns_pedometer.json,sns_multishake.json,sns_mag_cal_legacy.json,sns_mag_cal.json,sns_heart_rate.json,sns_gyro_cal.json,sns_geomag_rv.json,sns_fmv_legacy.json,sns_fmv.json,sns_facing.json,sns_dpc.json,sns_distance_bound.json,sns_direct_channel.json,sns_diag_filter.json,sns_device_orient.json,sns_dae.json,sns_cm.json,sns_ccd_v4_0_te_cd_regs.json,sns_ccd_v4_0_sensors.json,sns_ccd_v3_1_walk.json,sns_ccd_v3_0_walk.json,sns_ccd_v2_0_walk.json,sns_ccd_v1_0_ttw.json,sns_ccd_v1_0_amd.json,sns_bring_to_ear.json,sns_basic_gestures.json,sns_aont.json,sns_amd_sw_enabled.json,sns_amd_sw_disabled.json,sns_amd.json,atherton_wrist_tilt.json,atherton_wrist_pedo.json,atherton_vd6281_0.json,atherton_pah_815x_reg_0.json,atherton_mmc56x3x_0.json,atherton_lw_wdp_lsm6dst_0.json,atherton_lw_wdp_ak991x_0.json,atherton_lw_pah_815x_0.json,atherton_lw_ltr308_0.json,atherton_lw_lsm6dst_0.json,atherton_lw_lps22df_0.json,atherton_lw_aon_sns_cm.json,atherton_lw_aon_sensors_avail_adsp.json,atherton_lw_ak991x_0.json,atherton_law_wdp_lsm6dst_0.json,atherton_law_wdp_ak991x_0.json,atherton_law_power_0.json,atherton_law_pah_815x_0.json,atherton_law_ltr308_0.json,atherton_law_lsm6dst_0.json,atherton_law_lps22df_0.json,atherton_law_ak991x_0.json,atherton_icm4x6xx_0.json
+
+-------------------------------
+
+[sns_wrist_pedo.json]
+sns_wrist_pedo.json
+[sns_tilt_to_wake.json]
+sns_tilt_to_wake.json
+[sns_tilt_sw_enabled.json]
+sns_tilt_sw_enabled.json
+[sns_tilt_sw_disabled.json]
+sns_tilt_sw_disabled.json
+[sns_tilt.json]
+sns_tilt.json
+[sns_smd.json]
+sns_smd.json
+[sns_rotv.json]
+sns_rotv.json
+[sns_rmd.json]
+sns_rmd.json
+[sns_reg_config]
+sns_reg_config
+[sns_pedometer.json]
+sns_pedometer.json
+[sns_multishake.json]
+sns_multishake.json
+[sns_mag_cal_legacy.json]
+sns_mag_cal_legacy.json
+[sns_mag_cal.json]
+sns_mag_cal.json
+[sns_heart_rate.json]
+sns_heart_rate.json
+[sns_gyro_cal.json]
+sns_gyro_cal.json
+[sns_geomag_rv.json]
+sns_geomag_rv.json
+[sns_fmv_legacy.json]
+sns_fmv_legacy.json
+[sns_fmv.json]
+sns_fmv.json
+[sns_facing.json]
+sns_facing.json
+[sns_dpc.json]
+sns_dpc.json
+[sns_distance_bound.json]
+sns_distance_bound.json
+[sns_direct_channel.json]
+sns_direct_channel.json
+[sns_diag_filter.json]
+sns_diag_filter.json
+[sns_device_orient.json]
+sns_device_orient.json
+[sns_dae.json]
+sns_dae.json
+[sns_cm.json]
+sns_cm.json
+[sns_ccd_v4_0_te_cd_regs.json]
+sns_ccd_v4_0_te_cd_regs.json
+[sns_ccd_v4_0_sensors.json]
+sns_ccd_v4_0_sensors.json
+[sns_ccd_v3_1_walk.json]
+sns_ccd_v3_1_walk.json
+[sns_ccd_v3_0_walk.json]
+sns_ccd_v3_0_walk.json
+[sns_ccd_v2_0_walk.json]
+sns_ccd_v2_0_walk.json
+[sns_ccd_v1_0_ttw.json]
+sns_ccd_v1_0_ttw.json
+[sns_ccd_v1_0_amd.json]
+sns_ccd_v1_0_amd.json
+[sns_bring_to_ear.json]
+sns_bring_to_ear.json
+[sns_basic_gestures.json]
+sns_basic_gestures.json
+[sns_aont.json]
+sns_aont.json
+[sns_amd_sw_enabled.json]
+sns_amd_sw_enabled.json
+[sns_amd_sw_disabled.json]
+sns_amd_sw_disabled.json
+[sns_amd.json]
+sns_amd.json
+[atherton_wrist_tilt.json]
+atherton_wrist_tilt.json
+[atherton_wrist_pedo.json]
+atherton_wrist_pedo.json
+[atherton_vd6281_0.json]
+atherton_vd6281_0.json
+[atherton_pah_815x_reg_0.json]
+atherton_pah_815x_reg_0.json
+[atherton_mmc56x3x_0.json]
+atherton_mmc56x3x_0.json
+[atherton_lw_wdp_lsm6dst_0.json]
+atherton_lw_wdp_lsm6dst_0.json
+[atherton_lw_wdp_ak991x_0.json]
+atherton_lw_wdp_ak991x_0.json
+[atherton_lw_pah_815x_0.json]
+atherton_lw_pah_815x_0.json
+[atherton_lw_ltr308_0.json]
+atherton_lw_ltr308_0.json
+[atherton_lw_lsm6dst_0.json]
+atherton_lw_lsm6dst_0.json
+[atherton_lw_lps22df_0.json]
+atherton_lw_lps22df_0.json
+[atherton_lw_aon_sns_cm.json]
+atherton_lw_aon_sns_cm.json
+[atherton_lw_aon_sensors_avail_adsp.json]
+atherton_lw_aon_sensors_avail_adsp.json
+[atherton_lw_ak991x_0.json]
+atherton_lw_ak991x_0.json
+[atherton_law_wdp_lsm6dst_0.json]
+atherton_law_wdp_lsm6dst_0.json
+[atherton_law_wdp_ak991x_0.json]
+atherton_law_wdp_ak991x_0.json
+[atherton_law_power_0.json]
+atherton_law_power_0.json
+[atherton_law_pah_815x_0.json]
+atherton_law_pah_815x_0.json
+[atherton_law_ltr308_0.json]
+atherton_law_ltr308_0.json
+[atherton_law_lsm6dst_0.json]
+atherton_law_lsm6dst_0.json
+[atherton_law_lps22df_0.json]
+atherton_law_lps22df_0.json
+[atherton_law_ak991x_0.json]
+atherton_law_ak991x_0.json
+[atherton_icm4x6xx_0.json]
+atherton_icm4x6xx_0.json
+
+-------------------------------
+
+; Updating registry of atherton_icm4x6xx_0.json to remote path \vendor\etc\sensors\config\atherton_icm4x6xx_0.json
+HKR,Mappings\FASTRPC\Default\c6e1ade265bd2eee35a47f8c0fd5754ab572f2587bf5555175454bfaedf03d73,"Local",%REG_SZ%, %13%\atherton_icm4x6xx_0.json
+hkr,mappings\fastrpc\default\c6e1ade265bd2eee35a47f8c0fd5754ab572f2587bf5555175454bfaedf03d73,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_icm4x6xx_0.json
+
+; Updating registry of atherton_law_ak991x_0.json to remote path \vendor\etc\sensors\config\atherton_law_ak991x_0.json
+HKR,Mappings\FASTRPC\Default\2340a5a16b1c8962f10fb17f9f818a7e8ae8c993648201f432e7f8d763f9f19b,"Local",%REG_SZ%, %13%\atherton_law_ak991x_0.json
+hkr,mappings\fastrpc\default\2340a5a16b1c8962f10fb17f9f818a7e8ae8c993648201f432e7f8d763f9f19b,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_ak991x_0.json
+
+; Updating registry of atherton_law_lps22df_0.json to remote path \vendor\etc\sensors\config\atherton_law_lps22df_0.json
+HKR,Mappings\FASTRPC\Default\250afc5a26bbfed8e0ca788cf0a23f5a58abe06482ae1df99294302462125974,"Local",%REG_SZ%, %13%\atherton_law_lps22df_0.json
+hkr,mappings\fastrpc\default\250afc5a26bbfed8e0ca788cf0a23f5a58abe06482ae1df99294302462125974,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_lps22df_0.json
+
+; Updating registry of atherton_law_lsm6dst_0.json to remote path \vendor\etc\sensors\config\atherton_law_lsm6dst_0.json
+HKR,Mappings\FASTRPC\Default\1720bbeff2ee96a01380d140b9679ada35dea0237975e0df86b0829da04e0177,"Local",%REG_SZ%, %13%\atherton_law_lsm6dst_0.json
+hkr,mappings\fastrpc\default\1720bbeff2ee96a01380d140b9679ada35dea0237975e0df86b0829da04e0177,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_lsm6dst_0.json
+
+; Updating registry of atherton_law_ltr308_0.json to remote path \vendor\etc\sensors\config\atherton_law_ltr308_0.json
+HKR,Mappings\FASTRPC\Default\6c074e6581292519cef0f3a2bd9aacdd29d5da616a23b8eaed44e2e83de82f23,"Local",%REG_SZ%, %13%\atherton_law_ltr308_0.json
+hkr,mappings\fastrpc\default\6c074e6581292519cef0f3a2bd9aacdd29d5da616a23b8eaed44e2e83de82f23,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_ltr308_0.json
+
+; Updating registry of atherton_law_pah_815x_0.json to remote path \vendor\etc\sensors\config\atherton_law_pah_815x_0.json
+HKR,Mappings\FASTRPC\Default\fec9c1dd1091f58c7181a7507455ee45cf20be746746dbf05d9d58ffa57a436f,"Local",%REG_SZ%, %13%\atherton_law_pah_815x_0.json
+hkr,mappings\fastrpc\default\fec9c1dd1091f58c7181a7507455ee45cf20be746746dbf05d9d58ffa57a436f,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_pah_815x_0.json
+
+; Updating registry of atherton_law_power_0.json to remote path \vendor\etc\sensors\config\atherton_law_power_0.json
+HKR,Mappings\FASTRPC\Default\87f98760232bc1d59e6c72e10931c7be928b9b71cc270737d26c1d682745f628,"Local",%REG_SZ%, %13%\atherton_law_power_0.json
+hkr,mappings\fastrpc\default\87f98760232bc1d59e6c72e10931c7be928b9b71cc270737d26c1d682745f628,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_power_0.json
+
+; Updating registry of atherton_law_wdp_ak991x_0.json to remote path \vendor\etc\sensors\config\atherton_law_wdp_ak991x_0.json
+HKR,Mappings\FASTRPC\Default\5c5267ddd5646e2bc0528c94ae75d02dcdc48ffc76902d601a8a45e226c6d20b,"Local",%REG_SZ%, %13%\atherton_law_wdp_ak991x_0.json
+hkr,mappings\fastrpc\default\5c5267ddd5646e2bc0528c94ae75d02dcdc48ffc76902d601a8a45e226c6d20b,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_wdp_ak991x_0.json
+
+; Updating registry of atherton_law_wdp_lsm6dst_0.json to remote path \vendor\etc\sensors\config\atherton_law_wdp_lsm6dst_0.json
+HKR,Mappings\FASTRPC\Default\0ca1e892a6c86936c5dcec0b64b3cf97d4fed2a21328e3329a527fab1b0e2438,"Local",%REG_SZ%, %13%\atherton_law_wdp_lsm6dst_0.json
+hkr,mappings\fastrpc\default\0ca1e892a6c86936c5dcec0b64b3cf97d4fed2a21328e3329a527fab1b0e2438,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_law_wdp_lsm6dst_0.json
+
+; Updating registry of atherton_lw_ak991x_0.json to remote path \vendor\etc\sensors\config\atherton_lw_ak991x_0.json
+HKR,Mappings\FASTRPC\Default\605f15480da00e001f9ad241c12ffe68719bc131c0c36ea1f7c653ba9e2d099f,"Local",%REG_SZ%, %13%\atherton_lw_ak991x_0.json
+hkr,mappings\fastrpc\default\605f15480da00e001f9ad241c12ffe68719bc131c0c36ea1f7c653ba9e2d099f,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_ak991x_0.json
+
+; Updating registry of atherton_lw_aon_sensors_avail_adsp.json to remote path \vendor\etc\sensors\config\atherton_lw_aon_sensors_avail_adsp.json
+HKR,Mappings\FASTRPC\Default\48b0c799380e56a85a104c885e135d06c852729d2fbdc26bc56b9561c861367f,"Local",%REG_SZ%, %13%\atherton_lw_aon_sensors_avail_adsp.json
+hkr,mappings\fastrpc\default\48b0c799380e56a85a104c885e135d06c852729d2fbdc26bc56b9561c861367f,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_aon_sensors_avail_adsp.json
+
+; Updating registry of atherton_lw_aon_sns_cm.json to remote path \vendor\etc\sensors\config\atherton_lw_aon_sns_cm.json
+HKR,Mappings\FASTRPC\Default\f656e15070880835441c0189ba06b9f6e67fb15f60056e3952eae678d8931b00,"Local",%REG_SZ%, %13%\atherton_lw_aon_sns_cm.json
+hkr,mappings\fastrpc\default\f656e15070880835441c0189ba06b9f6e67fb15f60056e3952eae678d8931b00,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_aon_sns_cm.json
+
+; Updating registry of atherton_lw_lps22df_0.json to remote path \vendor\etc\sensors\config\atherton_lw_lps22df_0.json
+HKR,Mappings\FASTRPC\Default\a435a363d38e01af6d659bf6d4b6553c69bbaae2760e7457048b11b643fcea88,"Local",%REG_SZ%, %13%\atherton_lw_lps22df_0.json
+hkr,mappings\fastrpc\default\a435a363d38e01af6d659bf6d4b6553c69bbaae2760e7457048b11b643fcea88,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_lps22df_0.json
+
+; Updating registry of atherton_lw_lsm6dst_0.json to remote path \vendor\etc\sensors\config\atherton_lw_lsm6dst_0.json
+HKR,Mappings\FASTRPC\Default\4f4e420959f5498e795b28dd32311822e1252525d2fd39f4e9f1d4e35ef2f7d9,"Local",%REG_SZ%, %13%\atherton_lw_lsm6dst_0.json
+hkr,mappings\fastrpc\default\4f4e420959f5498e795b28dd32311822e1252525d2fd39f4e9f1d4e35ef2f7d9,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_lsm6dst_0.json
+
+; Updating registry of atherton_lw_ltr308_0.json to remote path \vendor\etc\sensors\config\atherton_lw_ltr308_0.json
+HKR,Mappings\FASTRPC\Default\f579822f00813b70578d48911ebe578637c071bde82bc497c61371efe1c42913,"Local",%REG_SZ%, %13%\atherton_lw_ltr308_0.json
+hkr,mappings\fastrpc\default\f579822f00813b70578d48911ebe578637c071bde82bc497c61371efe1c42913,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_ltr308_0.json
+
+; Updating registry of atherton_lw_pah_815x_0.json to remote path \vendor\etc\sensors\config\atherton_lw_pah_815x_0.json
+HKR,Mappings\FASTRPC\Default\03c1d9982a4d3cc63613e7ce4bd6aa5c38caab707109550f755c9ef007e53bbc,"Local",%REG_SZ%, %13%\atherton_lw_pah_815x_0.json
+hkr,mappings\fastrpc\default\03c1d9982a4d3cc63613e7ce4bd6aa5c38caab707109550f755c9ef007e53bbc,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_pah_815x_0.json
+
+; Updating registry of atherton_lw_wdp_ak991x_0.json to remote path \vendor\etc\sensors\config\atherton_lw_wdp_ak991x_0.json
+HKR,Mappings\FASTRPC\Default\ee180677ea86dfedb15f06ed71bb517f32592cc8384f4be9f1c72b2bda012708,"Local",%REG_SZ%, %13%\atherton_lw_wdp_ak991x_0.json
+hkr,mappings\fastrpc\default\ee180677ea86dfedb15f06ed71bb517f32592cc8384f4be9f1c72b2bda012708,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_wdp_ak991x_0.json
+
+; Updating registry of atherton_lw_wdp_lsm6dst_0.json to remote path \vendor\etc\sensors\config\atherton_lw_wdp_lsm6dst_0.json
+HKR,Mappings\FASTRPC\Default\7f48eb3171ca75cefa8fc01d904e9d91dcf1bdec752d5c2e51e71220a227b5c8,"Local",%REG_SZ%, %13%\atherton_lw_wdp_lsm6dst_0.json
+hkr,mappings\fastrpc\default\7f48eb3171ca75cefa8fc01d904e9d91dcf1bdec752d5c2e51e71220a227b5c8,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_lw_wdp_lsm6dst_0.json
+
+; Updating registry of atherton_mmc56x3x_0.json to remote path \vendor\etc\sensors\config\atherton_mmc56x3x_0.json
+HKR,Mappings\FASTRPC\Default\637d7a2234adbda2b9f9b25e42f48e96503f69d301d12d91942a98eb11e33935,"Local",%REG_SZ%, %13%\atherton_mmc56x3x_0.json
+hkr,mappings\fastrpc\default\637d7a2234adbda2b9f9b25e42f48e96503f69d301d12d91942a98eb11e33935,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_mmc56x3x_0.json
+
+; Updating registry of atherton_pah_815x_reg_0.json to remote path \vendor\etc\sensors\config\atherton_pah_815x_reg_0.json
+HKR,Mappings\FASTRPC\Default\2cf3d0c37a243eee652b66d154fd660e23f18fba9caaedbfb9a6c507e039016b,"Local",%REG_SZ%, %13%\atherton_pah_815x_reg_0.json
+hkr,mappings\fastrpc\default\2cf3d0c37a243eee652b66d154fd660e23f18fba9caaedbfb9a6c507e039016b,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_pah_815x_reg_0.json
+
+; Updating registry of atherton_vd6281_0.json to remote path \vendor\etc\sensors\config\atherton_vd6281_0.json
+HKR,Mappings\FASTRPC\Default\ae88025de4aa91310a647dfad32c22a1f39d22fa16d76f3f3a411b2951672650,"Local",%REG_SZ%, %13%\atherton_vd6281_0.json
+hkr,mappings\fastrpc\default\ae88025de4aa91310a647dfad32c22a1f39d22fa16d76f3f3a411b2951672650,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_vd6281_0.json
+
+; Updating registry of atherton_wrist_pedo.json to remote path \vendor\etc\sensors\config\atherton_wrist_pedo.json
+HKR,Mappings\FASTRPC\Default\0e58e1ecce52e103c74d04de2b8223116eb7a18ccfcb106c75f1ac7349dae7b3,"Local",%REG_SZ%, %13%\atherton_wrist_pedo.json
+hkr,mappings\fastrpc\default\0e58e1ecce52e103c74d04de2b8223116eb7a18ccfcb106c75f1ac7349dae7b3,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_wrist_pedo.json
+
+; Updating registry of atherton_wrist_tilt.json to remote path \vendor\etc\sensors\config\atherton_wrist_tilt.json
+HKR,Mappings\FASTRPC\Default\8af147ca99a657fc3fd139482f367da43524a72be874d83c16971037f1f5d913,"Local",%REG_SZ%, %13%\atherton_wrist_tilt.json
+hkr,mappings\fastrpc\default\8af147ca99a657fc3fd139482f367da43524a72be874d83c16971037f1f5d913,"remote",%reg_sz%, \vendor\etc\sensors\config\atherton_wrist_tilt.json
+
+; Updating registry of sns_amd.json to remote path \vendor\etc\sensors\config\sns_amd.json
+HKR,Mappings\FASTRPC\Default\faab18abdfbcf08f24617fbd70e8ecb341dec5ba2f9fed8fc98b1f6d96dd381f,"Local",%REG_SZ%, %13%\sns_amd.json
+hkr,mappings\fastrpc\default\faab18abdfbcf08f24617fbd70e8ecb341dec5ba2f9fed8fc98b1f6d96dd381f,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_amd.json
+
+; Updating registry of sns_amd_sw_disabled.json to remote path \vendor\etc\sensors\config\sns_amd_sw_disabled.json
+HKR,Mappings\FASTRPC\Default\47b8acbc15a5be0ea919ff188b4be9fc6b552641ccc96b55099f9a4789754cae,"Local",%REG_SZ%, %13%\sns_amd_sw_disabled.json
+hkr,mappings\fastrpc\default\47b8acbc15a5be0ea919ff188b4be9fc6b552641ccc96b55099f9a4789754cae,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_amd_sw_disabled.json
+
+; Updating registry of sns_amd_sw_enabled.json to remote path \vendor\etc\sensors\config\sns_amd_sw_enabled.json
+HKR,Mappings\FASTRPC\Default\5c83e49989eb5a6a6a63d299fa67b29490f8268a7c1e40e6d6769971e0f6bb94,"Local",%REG_SZ%, %13%\sns_amd_sw_enabled.json
+hkr,mappings\fastrpc\default\5c83e49989eb5a6a6a63d299fa67b29490f8268a7c1e40e6d6769971e0f6bb94,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_amd_sw_enabled.json
+
+; Updating registry of sns_aont.json to remote path \vendor\etc\sensors\config\sns_aont.json
+HKR,Mappings\FASTRPC\Default\1580e7950f854a62216f44163084ba83d301bc99fc6571bdced8af6f3e686ef6,"Local",%REG_SZ%, %13%\sns_aont.json
+hkr,mappings\fastrpc\default\1580e7950f854a62216f44163084ba83d301bc99fc6571bdced8af6f3e686ef6,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_aont.json
+
+; Updating registry of sns_basic_gestures.json to remote path \vendor\etc\sensors\config\sns_basic_gestures.json
+HKR,Mappings\FASTRPC\Default\95ab7cf5089ca49d2bf951f27e2922fdca16a16877f5851b513799ac2119a129,"Local",%REG_SZ%, %13%\sns_basic_gestures.json
+hkr,mappings\fastrpc\default\95ab7cf5089ca49d2bf951f27e2922fdca16a16877f5851b513799ac2119a129,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_basic_gestures.json
+
+; Updating registry of sns_bring_to_ear.json to remote path \vendor\etc\sensors\config\sns_bring_to_ear.json
+HKR,Mappings\FASTRPC\Default\6837f720e55398d08edffc8694e56d914c9c718c3c8e2754537ec08f8d6f5907,"Local",%REG_SZ%, %13%\sns_bring_to_ear.json
+hkr,mappings\fastrpc\default\6837f720e55398d08edffc8694e56d914c9c718c3c8e2754537ec08f8d6f5907,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_bring_to_ear.json
+
+; Updating registry of sns_ccd_v1_0_amd.json to remote path \vendor\etc\sensors\config\sns_ccd_v1_0_amd.json
+HKR,Mappings\FASTRPC\Default\32848f9ca0a03091762492bc3dc86a9363a36280161b79e7d311259ca0403717,"Local",%REG_SZ%, %13%\sns_ccd_v1_0_amd.json
+hkr,mappings\fastrpc\default\32848f9ca0a03091762492bc3dc86a9363a36280161b79e7d311259ca0403717,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_ccd_v1_0_amd.json
+
+; Updating registry of sns_ccd_v1_0_ttw.json to remote path \vendor\etc\sensors\config\sns_ccd_v1_0_ttw.json
+HKR,Mappings\FASTRPC\Default\f35df0078d1d6e39d4cdf0a4ab804699abf1589ea51e0f106c17837b85d95619,"Local",%REG_SZ%, %13%\sns_ccd_v1_0_ttw.json
+hkr,mappings\fastrpc\default\f35df0078d1d6e39d4cdf0a4ab804699abf1589ea51e0f106c17837b85d95619,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_ccd_v1_0_ttw.json
+
+; Updating registry of sns_ccd_v2_0_walk.json to remote path \vendor\etc\sensors\config\sns_ccd_v2_0_walk.json
+HKR,Mappings\FASTRPC\Default\8fc774530a8c96c0dbe05752745eaf9cd87d1a2dec6b05a01d75298070704c13,"Local",%REG_SZ%, %13%\sns_ccd_v2_0_walk.json
+hkr,mappings\fastrpc\default\8fc774530a8c96c0dbe05752745eaf9cd87d1a2dec6b05a01d75298070704c13,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_ccd_v2_0_walk.json
+
+; Updating registry of sns_ccd_v3_0_walk.json to remote path \vendor\etc\sensors\config\sns_ccd_v3_0_walk.json
+HKR,Mappings\FASTRPC\Default\5da1ac369ada8f5ed02ccc2bda7d37c895346b050b128c68c6a68c6a17e9d773,"Local",%REG_SZ%, %13%\sns_ccd_v3_0_walk.json
+hkr,mappings\fastrpc\default\5da1ac369ada8f5ed02ccc2bda7d37c895346b050b128c68c6a68c6a17e9d773,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_ccd_v3_0_walk.json
+
+; Updating registry of sns_ccd_v3_1_walk.json to remote path \vendor\etc\sensors\config\sns_ccd_v3_1_walk.json
+HKR,Mappings\FASTRPC\Default\5916a54c7e61a0bbc8ecd846b2d7efae8aba8e55519c3fae66599f6e950efcd7,"Local",%REG_SZ%, %13%\sns_ccd_v3_1_walk.json
+hkr,mappings\fastrpc\default\5916a54c7e61a0bbc8ecd846b2d7efae8aba8e55519c3fae66599f6e950efcd7,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_ccd_v3_1_walk.json
+
+; Updating registry of sns_ccd_v4_0_sensors.json to remote path \vendor\etc\sensors\config\sns_ccd_v4_0_sensors.json
+HKR,Mappings\FASTRPC\Default\d7ffaff94f134f97603284756e4e7c4430d6c0838a08ff78faea62a5932443ab,"Local",%REG_SZ%, %13%\sns_ccd_v4_0_sensors.json
+hkr,mappings\fastrpc\default\d7ffaff94f134f97603284756e4e7c4430d6c0838a08ff78faea62a5932443ab,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_ccd_v4_0_sensors.json
+
+; Updating registry of sns_ccd_v4_0_te_cd_regs.json to remote path \vendor\etc\sensors\config\sns_ccd_v4_0_te_cd_regs.json
+HKR,Mappings\FASTRPC\Default\2e63b81d98027f02cd5505722e67fe7e742ece1a8d75ae36b12b65cf2324fbae,"Local",%REG_SZ%, %13%\sns_ccd_v4_0_te_cd_regs.json
+hkr,mappings\fastrpc\default\2e63b81d98027f02cd5505722e67fe7e742ece1a8d75ae36b12b65cf2324fbae,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_ccd_v4_0_te_cd_regs.json
+
+; Updating registry of sns_cm.json to remote path \vendor\etc\sensors\config\sns_cm.json
+HKR,Mappings\FASTRPC\Default\e90b1c5330b8e25ce7398dc377f060e5280a582dbe26fc36cce5dce97a1c4929,"Local",%REG_SZ%, %13%\sns_cm.json
+hkr,mappings\fastrpc\default\e90b1c5330b8e25ce7398dc377f060e5280a582dbe26fc36cce5dce97a1c4929,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_cm.json
+
+; Updating registry of sns_dae.json to remote path \vendor\etc\sensors\config\sns_dae.json
+HKR,Mappings\FASTRPC\Default\aee6d93352d8f6dd71843d8737e86213a095514fe88605b66ee72264e35c5491,"Local",%REG_SZ%, %13%\sns_dae.json
+hkr,mappings\fastrpc\default\aee6d93352d8f6dd71843d8737e86213a095514fe88605b66ee72264e35c5491,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_dae.json
+
+; Updating registry of sns_device_orient.json to remote path \vendor\etc\sensors\config\sns_device_orient.json
+HKR,Mappings\FASTRPC\Default\a31b0d556a661a3492dafc13d3281e2d004ac27b67532276d43345f0450d3ba6,"Local",%REG_SZ%, %13%\sns_device_orient.json
+hkr,mappings\fastrpc\default\a31b0d556a661a3492dafc13d3281e2d004ac27b67532276d43345f0450d3ba6,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_device_orient.json
+
+; Updating registry of sns_diag_filter.json to remote path \vendor\etc\sensors\config\sns_diag_filter.json
+HKR,Mappings\FASTRPC\Default\c00402dc2a6a13969a21e20ed8d8b3cea699fa5557cbe68c1e02be0150e360ce,"Local",%REG_SZ%, %13%\sns_diag_filter.json
+hkr,mappings\fastrpc\default\c00402dc2a6a13969a21e20ed8d8b3cea699fa5557cbe68c1e02be0150e360ce,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_diag_filter.json
+
+; Updating registry of sns_direct_channel.json to remote path \vendor\etc\sensors\config\sns_direct_channel.json
+HKR,Mappings\FASTRPC\Default\f12e26c26c6b7e59e5bdafd7591f603d69864ddc11361f3a4e07fd68892608d1,"Local",%REG_SZ%, %13%\sns_direct_channel.json
+hkr,mappings\fastrpc\default\f12e26c26c6b7e59e5bdafd7591f603d69864ddc11361f3a4e07fd68892608d1,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_direct_channel.json
+
+; Updating registry of sns_distance_bound.json to remote path \vendor\etc\sensors\config\sns_distance_bound.json
+HKR,Mappings\FASTRPC\Default\cf25716acd786f77edd6cbe570de1227350160acfd7f6ad9a13dab6efbbf44c6,"Local",%REG_SZ%, %13%\sns_distance_bound.json
+hkr,mappings\fastrpc\default\cf25716acd786f77edd6cbe570de1227350160acfd7f6ad9a13dab6efbbf44c6,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_distance_bound.json
+
+; Updating registry of sns_dpc.json to remote path \vendor\etc\sensors\config\sns_dpc.json
+HKR,Mappings\FASTRPC\Default\78380d32f2a16b557e45a823370d0eb753922d8abb4c07105ae8c5ea90a18d2c,"Local",%REG_SZ%, %13%\sns_dpc.json
+hkr,mappings\fastrpc\default\78380d32f2a16b557e45a823370d0eb753922d8abb4c07105ae8c5ea90a18d2c,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_dpc.json
+
+; Updating registry of sns_facing.json to remote path \vendor\etc\sensors\config\sns_facing.json
+HKR,Mappings\FASTRPC\Default\cb926f260f462f3e533d08728c2470d91f9c6cfa5d5eab1fce7144636a957148,"Local",%REG_SZ%, %13%\sns_facing.json
+hkr,mappings\fastrpc\default\cb926f260f462f3e533d08728c2470d91f9c6cfa5d5eab1fce7144636a957148,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_facing.json
+
+; Updating registry of sns_fmv.json to remote path \vendor\etc\sensors\config\sns_fmv.json
+HKR,Mappings\FASTRPC\Default\8950e04fd4b978eb46e54b6a3e0b18792ab22efba1a4a9affed3d3ee4717f0e2,"Local",%REG_SZ%, %13%\sns_fmv.json
+hkr,mappings\fastrpc\default\8950e04fd4b978eb46e54b6a3e0b18792ab22efba1a4a9affed3d3ee4717f0e2,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_fmv.json
+
+; Updating registry of sns_fmv_legacy.json to remote path \vendor\etc\sensors\config\sns_fmv_legacy.json
+HKR,Mappings\FASTRPC\Default\5d2911d1a7bde8c36a3ab801d2c9530feaa4a227c0559fcc555b5828d54a487c,"Local",%REG_SZ%, %13%\sns_fmv_legacy.json
+hkr,mappings\fastrpc\default\5d2911d1a7bde8c36a3ab801d2c9530feaa4a227c0559fcc555b5828d54a487c,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_fmv_legacy.json
+
+; Updating registry of sns_geomag_rv.json to remote path \vendor\etc\sensors\config\sns_geomag_rv.json
+HKR,Mappings\FASTRPC\Default\7db8dd6ee807b2e72cd986bac7e7fc357d6129e4df3a981e00cd3a0ddd6c5d00,"Local",%REG_SZ%, %13%\sns_geomag_rv.json
+hkr,mappings\fastrpc\default\7db8dd6ee807b2e72cd986bac7e7fc357d6129e4df3a981e00cd3a0ddd6c5d00,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_geomag_rv.json
+
+; Updating registry of sns_gyro_cal.json to remote path \vendor\etc\sensors\config\sns_gyro_cal.json
+HKR,Mappings\FASTRPC\Default\20e67434ad11b4126130fd0e55f127b08048d9e5b578c7337bcabc21416bfdcd,"Local",%REG_SZ%, %13%\sns_gyro_cal.json
+hkr,mappings\fastrpc\default\20e67434ad11b4126130fd0e55f127b08048d9e5b578c7337bcabc21416bfdcd,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_gyro_cal.json
+
+; Updating registry of sns_heart_rate.json to remote path \vendor\etc\sensors\config\sns_heart_rate.json
+HKR,Mappings\FASTRPC\Default\e0826b1c3515f7b0a7fb04e79b9f4521029c2151c5ac6dbe4f8022b7f9c658f7,"Local",%REG_SZ%, %13%\sns_heart_rate.json
+hkr,mappings\fastrpc\default\e0826b1c3515f7b0a7fb04e79b9f4521029c2151c5ac6dbe4f8022b7f9c658f7,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_heart_rate.json
+
+; Updating registry of sns_mag_cal.json to remote path \vendor\etc\sensors\config\sns_mag_cal.json
+HKR,Mappings\FASTRPC\Default\149a82b7b9c4b3e8a3bc0fc5cff177a8f55137d911ed2a3c53a8b92342af14d3,"Local",%REG_SZ%, %13%\sns_mag_cal.json
+hkr,mappings\fastrpc\default\149a82b7b9c4b3e8a3bc0fc5cff177a8f55137d911ed2a3c53a8b92342af14d3,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_mag_cal.json
+
+; Updating registry of sns_mag_cal_legacy.json to remote path \vendor\etc\sensors\config\sns_mag_cal_legacy.json
+HKR,Mappings\FASTRPC\Default\efb41311f9aed32d1e16bb111ccbd004bdc76400c5b717ff597d7e26cae6c651,"Local",%REG_SZ%, %13%\sns_mag_cal_legacy.json
+hkr,mappings\fastrpc\default\efb41311f9aed32d1e16bb111ccbd004bdc76400c5b717ff597d7e26cae6c651,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_mag_cal_legacy.json
+
+; Updating registry of sns_multishake.json to remote path \vendor\etc\sensors\config\sns_multishake.json
+HKR,Mappings\FASTRPC\Default\b6de4a3135c28af2b1cb45e5cf44c2e49e60fa59f5ce67a4436721bdb4ae0bf7,"Local",%REG_SZ%, %13%\sns_multishake.json
+hkr,mappings\fastrpc\default\b6de4a3135c28af2b1cb45e5cf44c2e49e60fa59f5ce67a4436721bdb4ae0bf7,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_multishake.json
+
+; Updating registry of sns_pedometer.json to remote path \vendor\etc\sensors\config\sns_pedometer.json
+HKR,Mappings\FASTRPC\Default\994640118dca5d66f1a559fbbea646a98cd4103fb2e732afaed8e077d75c94b4,"Local",%REG_SZ%, %13%\sns_pedometer.json
+hkr,mappings\fastrpc\default\994640118dca5d66f1a559fbbea646a98cd4103fb2e732afaed8e077d75c94b4,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_pedometer.json
+
+; Updating registry of sns_reg_config to remote path \vendor\etc\sensors\config\sns_reg_config
+HKR,Mappings\FASTRPC\Default\bbf3cae24853c58fb06f03b1ce0bed5e1795d58a59dae3054defa3f7e7b5bb6f,"Local",%REG_SZ%, %13%\sns_reg_config
+hkr,mappings\fastrpc\default\bbf3cae24853c58fb06f03b1ce0bed5e1795d58a59dae3054defa3f7e7b5bb6f,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_reg_config
+
+; Updating registry of sns_rmd.json to remote path \vendor\etc\sensors\config\sns_rmd.json
+HKR,Mappings\FASTRPC\Default\9e0a728851e3dd779d5460ce672b1fab5080025ac52ff7d88c3771413e4ee530,"Local",%REG_SZ%, %13%\sns_rmd.json
+hkr,mappings\fastrpc\default\9e0a728851e3dd779d5460ce672b1fab5080025ac52ff7d88c3771413e4ee530,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_rmd.json
+
+; Updating registry of sns_rotv.json to remote path \vendor\etc\sensors\config\sns_rotv.json
+HKR,Mappings\FASTRPC\Default\264177299ea594df2ddb3baf817f913c60202eee8a24611b69e85189f4f70319,"Local",%REG_SZ%, %13%\sns_rotv.json
+hkr,mappings\fastrpc\default\264177299ea594df2ddb3baf817f913c60202eee8a24611b69e85189f4f70319,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_rotv.json
+
+; Updating registry of sns_smd.json to remote path \vendor\etc\sensors\config\sns_smd.json
+HKR,Mappings\FASTRPC\Default\3740670ab403905844de0063a7159aa46724b493359b91eb143e84d944d1c0a3,"Local",%REG_SZ%, %13%\sns_smd.json
+hkr,mappings\fastrpc\default\3740670ab403905844de0063a7159aa46724b493359b91eb143e84d944d1c0a3,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_smd.json
+
+; Updating registry of sns_tilt.json to remote path \vendor\etc\sensors\config\sns_tilt.json
+HKR,Mappings\FASTRPC\Default\e6a206352c7ec693cc1fdc4ee8b6ed7fb027582c28e3fcda178cdde035ab7480,"Local",%REG_SZ%, %13%\sns_tilt.json
+hkr,mappings\fastrpc\default\e6a206352c7ec693cc1fdc4ee8b6ed7fb027582c28e3fcda178cdde035ab7480,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_tilt.json
+
+; Updating registry of sns_tilt_sw_disabled.json to remote path \vendor\etc\sensors\config\sns_tilt_sw_disabled.json
+HKR,Mappings\FASTRPC\Default\5cdcc0c7f69677a9006508d6468af7f7b3027fd8d8b91a913dce6cec3dd8ae93,"Local",%REG_SZ%, %13%\sns_tilt_sw_disabled.json
+hkr,mappings\fastrpc\default\5cdcc0c7f69677a9006508d6468af7f7b3027fd8d8b91a913dce6cec3dd8ae93,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_tilt_sw_disabled.json
+
+; Updating registry of sns_tilt_sw_enabled.json to remote path \vendor\etc\sensors\config\sns_tilt_sw_enabled.json
+HKR,Mappings\FASTRPC\Default\bd60315fd8c6a886a6b956fffd1f587dae73b70a77b446d0bebb5981258ce621,"Local",%REG_SZ%, %13%\sns_tilt_sw_enabled.json
+hkr,mappings\fastrpc\default\bd60315fd8c6a886a6b956fffd1f587dae73b70a77b446d0bebb5981258ce621,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_tilt_sw_enabled.json
+
+; Updating registry of sns_tilt_to_wake.json to remote path \vendor\etc\sensors\config\sns_tilt_to_wake.json
+HKR,Mappings\FASTRPC\Default\cf98ad20e1b870acc2e3e25977539f042039854e531e9e9eb897883506f38242,"Local",%REG_SZ%, %13%\sns_tilt_to_wake.json
+hkr,mappings\fastrpc\default\cf98ad20e1b870acc2e3e25977539f042039854e531e9e9eb897883506f38242,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_tilt_to_wake.json
+
+; Updating registry of sns_wrist_pedo.json to remote path \vendor\etc\sensors\config\sns_wrist_pedo.json
+HKR,Mappings\FASTRPC\Default\8df85b4d7b28c6861c9a9912b8dc4f187745f83feef0757167157a4cffdeb447,"Local",%REG_SZ%, %13%\sns_wrist_pedo.json
+hkr,mappings\fastrpc\default\8df85b4d7b28c6861c9a9912b8dc4f187745f83feef0757167157a4cffdeb447,"remote",%reg_sz%, \vendor\etc\sensors\config\sns_wrist_pedo.json
+

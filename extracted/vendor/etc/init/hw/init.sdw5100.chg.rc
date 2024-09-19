@@ -1,0 +1,3 @@
+# Enable HVDCP boost (QC3.0) for normal boot only
+on property:ro.bootmode=normal && property:vendor.common.modules.ready=1
+    write /sys/devices/platform/soc/soc\:google,hvdcp/enabled 1

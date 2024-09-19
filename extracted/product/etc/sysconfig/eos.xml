@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Allow SCONE JobIntentService & Services to run in background -->
+    <allow-in-power-save package="com.google.android.apps.scone" />
+
+    <allow-in-power-save package="com.android.pixellogger" />
+
+    <!-- Allow connectivity-monitor service in background -->
+    <allow-in-power-save package="com.google.android.connectivitymonitor" />
+
+    <!-- Allow connectivitythermalpowermanager service in background -->
+    <allow-in-power-save package="com.google.android.connectivitythermalpowermanager" />
+</config>

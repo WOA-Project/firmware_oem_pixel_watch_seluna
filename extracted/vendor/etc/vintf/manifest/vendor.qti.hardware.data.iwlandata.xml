@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/qcom/sw5100/proprietary/qcril-data-hal/vendor.qti.hardware.data.iwlandata.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.qti.hardware.data.iwlandata</name>
+        <fqname>IIWlan/slot1</fqname>
+        <fqname>IIWlan/slot2</fqname>
+    </hal>
+</manifest>

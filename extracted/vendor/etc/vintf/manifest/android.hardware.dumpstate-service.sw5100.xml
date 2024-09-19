@@ -1,0 +1,10 @@
+<!--
+    Input:
+        device/google/sw5100/dumpstate/android.hardware.dumpstate-service.sw5100.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.dumpstate</name>
+        <fqname>IDumpstateDevice/default</fqname>
+    </hal>
+</manifest>

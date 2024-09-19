@@ -1,0 +1,11 @@
+<!--
+    Input:
+        device/google/sw5100/displayoffload_v2_1/vendor.google_clockwork.displayoffload@2.1-service.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="hidl">
+        <name>vendor.google_clockwork.displayoffload</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.1::IDisplayOffload/default</fqname>
+    </hal>
+</manifest>

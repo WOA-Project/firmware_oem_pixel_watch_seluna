@@ -1,0 +1,55 @@
+{
+    "Nodes": [
+        {
+            "Name": "CPUScalingMaxFreq",
+            "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
+            "Values": [
+                "1708800",
+                "1363200",
+                "864000",
+                "614400"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPUScalingMinFreq",
+            "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
+            "Values": [
+                "1708800",
+                "1363200",
+                "864000",
+                "614400",
+                "0"
+            ],
+            "ResetOnInit": true,
+            // It is slow writing to this file. Holding the file descriptor should speed it up.
+            "HoldFd": true
+
+        },
+        {
+            "Name": "GPUClock",
+            "Path": "/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk",
+            "Values": [
+                "1010000000",
+                "900000000",
+                "700000000",
+                "470000000",
+                "310000000"
+            ]
+        }
+    ],
+    "Actions": [
+        {
+          "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+          "Node": "CPUScalingMinFreq",
+          "Duration" : 50,
+          "Value": "1363200"
+        },{
+          "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+          "Node": "GPUClock",
+          "Duration" : 50,
+          "Value": "1010000000"
+        }
+    ]
+}

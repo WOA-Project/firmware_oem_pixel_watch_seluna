@@ -1,0 +1,5 @@
+vendor.google_clockwork.lefty::ILefty                           u:object_r:hal_lefty_hwservice:s0
+vendor.google_clockwork.wristorientation::IWristOrientation     u:object_r:hal_wristorientation_hwservice:s0
+vendor.google_clockwork.healthservices::IHealthServices         u:object_r:hal_healthservices_hwservice:s0
+vendor.qti.hardware.sigma_miracast::Isigma_miracast             u:object_r:vendor_sigmahal_hwservice:s0
+vendor.qti.hardware.qccsyshal::IQccsyshal                       u:object_r:vendor_qccsyshal_hwservice:s0

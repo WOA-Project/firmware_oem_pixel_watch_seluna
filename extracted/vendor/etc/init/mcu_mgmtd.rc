@@ -1,0 +1,22 @@
+on post-fs-data
+    wait /sys/devices/virtual/nanohub/nanohub_comms/download_firmware
+    restorecon_recursive /sys/devices/virtual/nanohub/nanohub_comms
+    start mcu_mgmtd
+
+service mcu_mgmtd /vendor/bin/mcu_mgmtd
+    user root
+    group system
+    socket mcu_cwy_rpc stream 0660 system system
+    socket mcu_event seqpacket 0660 system system
+    socket mcu_pw_rpc stream 0660 system system
+
+
+on post-fs-data
+    # MCU Updater directories
+    mkdir /data/vendor/mcu_firmware 0771 system system
+    mkdir /data/vendor/mcu_firmware/current 0771 system system
+    mkdir /data/vendor/mcu_firmware/previous 0771 system system
+    mkdir /data/vendor/mcu_firmware/temp 0771 system system
+    write /data/vendor/mcu_firmware/original-version.txt "0.0"
+    chmod 660 /data/vendor/mcu_firmware/original-version.txt
+    chown system system /data/vendor/mcu_firmware/original-version.txt

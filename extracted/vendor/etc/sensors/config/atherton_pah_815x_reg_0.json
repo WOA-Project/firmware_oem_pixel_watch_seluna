@@ -1,0 +1,199 @@
+{
+  "config":{
+    "hw_platform": ["MTP", "IOT", "QRD", "RCM", "IDP", "WDP"],
+      "soc_id": ["486", "517"]
+    },
+    "pah_815x_0": {
+        "owner": "pah_815x",
+        ".param_cal_list": {
+      "owner": "pah_815x",
+      "0": {
+        "type": "str",
+        "ver": "0",
+        "data": "pah_815x_0.param_cal.param_cal"
+      }
+        },
+    ".param_cal.param_cal": {
+      "owner": "pah_815x",
+      "0": {
+        "type": "int",
+        "ver": "0",
+        "data": "1"
+      },
+      "1": {
+        "type": "int",
+        "ver": "0",
+        "data": "1"
+      },
+      "2": {
+        "type": "int",
+        "ver": "0",
+        "data": "0"
+      },
+      "3": {
+        "type": "int",
+        "ver": "0",
+        "data": "639"
+      }
+    },
+        ".ppg_ex_list": {
+      "owner": "pah_815x",
+      "0": {
+        "type": "str",
+        "ver": "0",
+        "data": "pah_815x_0.25Hz.ppg_ex"
+      },
+      "1": {
+        "type": "str",
+        "ver": "0",
+        "data": "pah_815x_0.100Hz.ppg_ex"
+        }
+    },
+    ".25Hz.ppg_ex": {
+      "owner": "pah_815x",
+      "0": {
+        "type": "int",
+        "ver": "0",
+        "data": "1"
+      },
+      "1": {
+        "type": "int",
+        "ver": "0",
+        "data": "22"
+      },
+      "2": {
+        "type": "int",
+        "ver": "0",
+        "data": "25"
+      },
+      "3": {
+        "type": "int",
+        "ver": "0",
+        "data": "51380607"
+      },
+      "4": {
+        "type": "int",
+        "ver": "0",
+        "data": "51453707"
+      },
+      "5": {
+        "type": "int",
+        "ver": "0",
+        "data": "306971263"
+      },
+      "6": {
+        "type": "int",
+        "ver": "0",
+        "data": "291641431"
+      },
+      "7": {
+        "type": "int",
+        "ver": "0",
+        "data": "89850448"
+      },
+      "8": {
+        "type": "int",
+        "ver": "0",
+        "data": "189859174"
+      },
+      "9": {
+        "type": "int",
+        "ver": "0",
+        "data": "459742044"
+      },
+      "10": {
+        "type": "int",
+        "ver": "0",
+        "data": "2136358731"
+      },
+      "11": {
+        "type": "int",
+        "ver": "0",
+        "data": "24149857"
+      },
+      "12": {
+        "type": "int",
+        "ver": "0",
+        "data": "91488371"
+      },
+      "13": {
+        "type": "int",
+        "ver": "0",
+        "data": "527172145"
+      }
+    },
+    ".100Hz.ppg_ex": {
+      "owner": "pah_815x",
+      "0": {
+        "type": "int",
+        "ver": "0",
+        "data": "1"
+      },
+      "1": {
+        "type": "int",
+        "ver": "0",
+        "data": "22"
+      },
+      "2": {
+        "type": "int",
+        "ver": "0",
+        "data": "100"
+      },
+      "3": {
+        "type": "int",
+        "ver": "0",
+        "data": "1048959"
+      },
+      "4": {
+        "type": "int",
+        "ver": "0",
+        "data": "1122059"
+      },
+      "5": {
+        "type": "int",
+        "ver": "0",
+        "data": "306971263"
+      },
+      "6": {
+        "type": "int",
+        "ver": "0",
+        "data": "291641431"
+      },
+      "7": {
+        "type": "int",
+        "ver": "0",
+        "data": "89850960"
+      },
+      "8": {
+        "type": "int",
+        "ver": "0",
+        "data": "189859174"
+      },
+      "9": {
+        "type": "int",
+        "ver": "0",
+        "data": "409409628"
+      },
+      "10": {
+        "type": "int",
+        "ver": "0",
+        "data": "2136358731"
+      },
+      "11": {
+        "type": "int",
+        "ver": "0",
+        "data": "24149857"
+      },
+      "12": {
+        "type": "int",
+        "ver": "0",
+        "data": "24395891"
+      },
+      "13": {
+        "type": "int",
+        "ver": "0",
+        "data": "57410097"
+      }
+    }
+  }
+}

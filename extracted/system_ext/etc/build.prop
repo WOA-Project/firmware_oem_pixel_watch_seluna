@@ -1,0 +1,25 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.system_ext.brand=google
+ro.product.system_ext.device=seluna
+ro.product.system_ext.manufacturer=Google
+ro.product.system_ext.model=Pixel Watch 3
+ro.product.system_ext.name=seluna
+ro.system_ext.build.date=Wed Jul 17 15:50:53 UTC 2024
+ro.system_ext.build.date.utc=1721231453
+ro.system_ext.build.fingerprint=google/seluna/seluna:14/AW2A.240903.001.A3/12102650:user/release-keys
+ro.system_ext.build.id=AW2A.240903.001.A3
+ro.system_ext.build.tags=release-keys
+ro.system_ext.build.type=user
+ro.system_ext.build.version.incremental=12102650
+ro.system_ext.build.version.release=14
+ro.system_ext.build.version.release_or_codename=14
+ro.system_ext.build.version.sdk=34
+####################################
+# from variable PRODUCT_SYSTEM_EXT_PROPERTIES
+####################################
+persist.vendor.dpm.feature=0
+# end of file
+

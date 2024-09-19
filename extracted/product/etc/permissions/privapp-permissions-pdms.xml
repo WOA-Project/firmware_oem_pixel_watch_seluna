@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<permissions>
+  <privapp-permissions package="com.google.android.wearable.pixel.pdms">
+    <permission name="android.permission.BIND_TELECOM_CONNECTION_SERVICE"/>
+    <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+    <permission name="android.permission.MODIFY_PHONE_STATE"/>
+    <permission name="android.permission.CHANGE_NETWORK_STATE"/>
+    <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <permission name="android.permission.MANAGE_NOTIFICATIONS"/>
+    <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
+    <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
+    <permission name="com.google.wear.permission.GATHER_OEM_DATA"/>
+    <permission name="android.permission.BACKUP"/>
+    <permission name="com.google.wear.permission.WRITE_FOCUS_MODES"/>
+    <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
+    <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+  </privapp-permissions>
+</permissions>

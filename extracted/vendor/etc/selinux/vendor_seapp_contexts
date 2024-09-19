@@ -1,0 +1,26 @@
+user=_app isPrivApp=true name=com.google.android.grilservice domain=grilservice_app levelFrom=all
+user=system seinfo=platform name=com.google.SSRestartDetector domain=ssr_detector_app type=system_app_data_file levelFrom=user
+user=system seinfo=platform isPrivApp=true name=com.google.android.wearable.fitbit.mcu.updater domain=mcu_updater_app type=system_app_data_file levelFrom=none level=s0
+user=_app seinfo=platform name=com.android.pixellogger domain=logger_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.google.android.connectivitymonitor domain=con_monitor_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
+user=_app isPrivApp=true seinfo=platform name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
+user=_app isPrivApp=true name=com.google.euiccpixel domain=euiccpixel_app type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.android.ramdump domain=ramdump_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true name=com.google.pixel.digitalkey.timesync domain=vendor_cccdktimesync_app type=app_data_file levelFrom=all
+user=_app seinfo=tango name=com.google.tango:app domain=untrusted_app type=app_data_file levelFrom=user
+user=_app seinfo=platform name=com.qualcomm.timeservice domain=vendor_timeservice_app type=app_data_file levelFrom=all
+user=_app seinfo=platform name=.qtidataservices domain=vendor_qtidataservices_app type=app_data_file levelFrom=all
+user=radio seinfo=platform name=.imshelperservice domain=vendor_imshelper_app type=radio_data_file
+user=_app seinfo=platform name=com.qualcomm.qti.poweroffalarm domain=vendor_poweroffalarm_app type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.qualcomm.qti.qms.service.trustzoneaccess domain=vendor_tzas_app type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.qti.ltebc domain=vendor_embmssl_app type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.qualcomm.qti.qms.service.connectionsecurity domain=vendor_cs_app type=app_data_file levelFrom=all
+user=_app seinfo=platform name=.qms domain=vendor_qms_app type=app_data_file levelFrom=all
+user=system seinfo=platform name=com.qualcomm.qti.perfdump domain=vendor_perfdump_app type=system_app_data_file
+user=_app seinfo=platform name=.pasr domain=vendor_powerservice_app type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.qualcomm.qti.sidekickmetrics domain=vendor_sidekick_metrics_service type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.qualcomm.qti.aonutility domain=vendor_aonutility_service type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.qualcomm.qti.powerstatemanagerservice domain=powerstatemanager_service type=app_data_file levelFrom=all
+user=_app isPrivApp=true name=com.google.android.apps.internal.wearables.ppgdatacollector domain=data_streamer_app type=privapp_data_file levelFrom=all
+user=_app isPrivApp=true name=com.google.android.hardwareinfo domain=hardware_info_app type=app_data_file levelFrom=user

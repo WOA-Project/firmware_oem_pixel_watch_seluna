@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ This XML file controls the allow-list of packages that have the capability to perform a staged
+ install (either APEX or APK) and a non-staged APEX install on 1st-party wear devices.
+-->
+<config>
+  <allowed-vendor-apex package="com.google.wearable.wac.whshal" installerPackage="com.google.android.wearable.fitbit.mcu.data" />
+  <whitelisted-staged-installer package="com.google.android.wearable.fitbit.mcu.data" />
+</config>

@@ -1,0 +1,11 @@
+on fs
+    mkdir /mnt/vendor/bldr_log 0440 system system
+    mount vfat /dev/block/by-name/logfs /mnt/vendor/bldr_log ro noatime shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:vendor_bldr_log_file:s0
+
+service vendor.dumpstate-default /vendor/bin/hw/android.hardware.dumpstate-service.sw5100
+    class hal
+    user system
+    group system context_hub wifi
+    interface aidl android.hardware.dumpstate.IDumpstateDevice/default
+    oneshot
+    disabled

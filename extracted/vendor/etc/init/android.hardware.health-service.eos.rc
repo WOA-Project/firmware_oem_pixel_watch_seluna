@@ -1,0 +1,32 @@
+service vendor.health-eos /vendor/bin/hw/android.hardware.health-service.eos
+    class hal
+    seclabel u:r:hal_health_default:s0
+    user system
+    group system
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+    file /dev/kmsg w
+    disabled
+
+service vendor.charger /vendor/bin/hw/android.hardware.health-service.eos --charger
+    class charger
+    seclabel u:r:charger_vendor:s0
+    user system
+    group system wakelock input
+    capabilities SYS_BOOT
+    file /dev/kmsg w
+    file /sys/fs/pstore/console-ramoops-0 r
+    file /sys/fs/pstore/console-ramoops r
+    file /proc/last_kmsg r
+    disabled
+
+on charger
+    setprop vendor.charger.off_mode true
+
+on late-init
+    setprop vendor.charger.off_mode false
+
+on property:init.svc.vendor.hvdcp_opti=running && property:vendor.charger.off_mode=false
+    start vendor.health-eos
+
+on property:init.svc.vendor.hvdcp_opti=running && property:vendor.charger.off_mode=true
+    start vendor.charger
