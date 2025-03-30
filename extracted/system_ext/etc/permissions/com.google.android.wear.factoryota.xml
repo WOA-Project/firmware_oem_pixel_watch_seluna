@@ -14,5 +14,9 @@
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
         <permission name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
+
+        <!-- Dump bugreport without user consent in user-debug ROM -->
+        <permission name="android.permission.DUMP"/>
+        <permission name="android.permission.CAPTURE_CONSENTLESS_BUGREPORT_ON_USERDEBUG_BUILD"/>
     </privapp-permissions>
 </permissions>

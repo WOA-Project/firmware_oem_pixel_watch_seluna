@@ -6,7 +6,6 @@ ThermalObserver                                                         u:object
 WearConfigManagerService                                                u:object_r:WearConfigManagerService_service:s0
 WearConnectivityService                                                 u:object_r:WearConnectivityService_service:s0
 WearDisplayService                                                      u:object_r:WearDisplayService_service:s0
-WearLeftyService                                                        u:object_r:WearLeftyService_service:s0
 WristOrientationService                                                 u:object_r:WristOrientationService_service:s0
 WearPowerService                                                        u:object_r:WearPowerService_service:s0
 activity_ambient                                                        u:object_r:system_app_service:s0
@@ -45,3 +44,4 @@ vendor.qti.qvirt.IVirtualizationService/default   u:object_r:vendor_hal_qvirt_se
 vendor.virtual_keyboard                   u:object_r:vendor_virtual_keyboard_service:s0
 cross_device_service                      u:object_r:cross_device_service:s0
 offload                                        u:object_r:vendor_offload_service:s0
+suspend                                        u:object_r:vendor_suspend_service:s0

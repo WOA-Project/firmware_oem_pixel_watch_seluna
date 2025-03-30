@@ -149,4 +149,6 @@
 
   <alias name="font-family-flex-device-default" to="google-sans-flex"/>
 
+  <alias name="font-family-system-surfaces-device-default" to="google-sans-flex"/>
+
 </fonts-modification>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright 2021 Google Inc. All Rights Reserved-->
+<permissions>
+  <privapp-permissions package="com.google.android.apps.pixel.dcservice">
+    <permission name="android.permission.WAKE_LOCK"/>
+    <permission name="android.permission.QUERY_ALL_PACKAGES"/>
+    <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+    <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    <permission name="android.permission.GET_PACKAGE_SIZE" />
+    <permission name="android.permission.NFC" />
+    <permission name="android.permission.INTERNET" />
+    <permission name="android.permission.REAL_GET_TASKS" />
+    <permission name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+  </privapp-permissions>
+</permissions>

@@ -1,0 +1,18 @@
+<!--
+    Input:
+        device/google/clockwork/compatibility_matrices/wrist_orientation_framework_compatibility_matrix.xml
+-->
+<compatibility-matrix version="9.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.google_clockwork.wristorientation</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWristOrientation</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IWristOrientationCallback</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

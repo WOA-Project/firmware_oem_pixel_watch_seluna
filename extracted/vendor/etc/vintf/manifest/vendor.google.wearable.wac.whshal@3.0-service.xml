@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/google/wearable/wac/whs_hal/apex/vendor.google.wearable.wac.whshal@3.0-service.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.google_clockwork.healthservices</name>
+        <version>2</version>
+        <fqname>IHealthServices/default</fqname>
+    </hal>
+</manifest>

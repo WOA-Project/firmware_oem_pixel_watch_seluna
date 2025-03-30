@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config>
+    <!-- Allow 1P WF service RWF in background as it needs wakelock while idle -->
+    <allow-in-power-save package="com.google.android.wearable.watchface.rwf"/>
+</config>

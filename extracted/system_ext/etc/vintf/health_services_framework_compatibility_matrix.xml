@@ -1,0 +1,14 @@
+<!--
+    Input:
+        device/google/clockwork/compatibility_matrices/health_services_framework_compatibility_matrix.xml
+-->
+<compatibility-matrix version="9.0" type="framework">
+    <hal format="aidl" optional="true">
+        <name>vendor.google_clockwork.healthservices</name>
+        <version>1-3</version>
+        <interface>
+            <name>IHealthServices</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

@@ -12,5 +12,6 @@
         <permission name="android.permission.POST_NOTIFICATIONS"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.WAKE_LOCK"/>
+        <permission name="com.google.android.wearable.healthservices.permission.READ_EXERCISE_OWNER_PACKAGE_NAME"/>
     </privapp-permissions>
 </permissions>

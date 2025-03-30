@@ -37,5 +37,7 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.WRITE_SETTINGS"/>
         <permission name="com.google.android.clockwork.settings.CHANGE_AIRPLANE_MODE"/>
+        <!-- Control the DoNotDisturb mode. -->
+        <permission name="com.google.wear.permission.WRITE_FOCUS_MODES"/>
     </privapp-permissions>
 </permissions>

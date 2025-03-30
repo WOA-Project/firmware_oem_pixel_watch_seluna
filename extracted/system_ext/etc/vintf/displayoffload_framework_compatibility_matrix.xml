@@ -1,0 +1,16 @@
+<!--
+    Input:
+        device/google/clockwork/compatibility_matrices/displayoffload_framework_compatibility_matrix.xml
+-->
+<compatibility-matrix version="9.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.google_clockwork.displayoffload</name>
+        <version>1.1</version>
+        <version>2.0</version>
+        <version>2.1</version>
+        <interface>
+            <name>IDisplayOffload</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

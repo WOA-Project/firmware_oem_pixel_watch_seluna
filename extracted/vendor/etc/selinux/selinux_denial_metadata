@@ -10,4 +10,9 @@ vendor_agmservice_qti debugfs dir b/278926203
 vendor_hal_gnss_qti boot_status_prop file b/294403988
 vendor_sensors vendor_qdsp_device chr_file b/290421020
 incidentd incidentd anon_inode b/280222416
+vendor_hal_gnss_qti vendor_hal_gnss_qti socket b/367844016
+vendor_hal_usb_qti sysfs_udc dir b/361985697
+vendor_diag-router vendor_qlogd process b/367846064
+dumpstate hal_power_stats_vendor_service service_manager b/185723618
+pixelstats_vendor block_device dir b/375917233
 mcu_mgmtd unlabeled dir b/290424297

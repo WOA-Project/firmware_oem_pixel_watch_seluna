@@ -127,7 +127,7 @@ on fs
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/battery 0700 system system
-    restorecon_recursive /mnt/vendor/persist
+    restorecon_recursive --force /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/sensors 0755 system system
     mkdir /mnt/vendor/persist/sensors/registry 0755 system system
@@ -138,6 +138,9 @@ on fs
     # walt scheduler overrides
     # disable panic on walt bug
     write /proc/sys/walt/panic_on_walt_bug 0x4544DE30
+
+    #  Additional configurtion for [khungtaskd]
+    write /proc/sys/kernel/hung_task_all_cpu_backtrace 1
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
@@ -313,15 +316,15 @@ on property:vendor.thermal.link_ready=1
     chown system system /dev/thermal/tz-by-name/wlan-usr/trip_point_0_type
 
 on property:vendor.device.modules.ready=1
+    # Permission for Doze Brightness
+    chown system system /sys/class/backlight/panel0-backlight/doze_brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_doze_brightness
     # Permission for High Brightness Mode
     chmod 0660 /sys/class/backlight/panel0-backlight/hbm
     chown system system /sys/class/backlight/panel0-backlight/hbm
 
-on property:persist.vendor.ssr.restart_level=modem && property:ro.kernel.version=5.15
+on property:persist.vendor.ssr.restart_level=modem
     setprop persist.vendor.ssr.restart_level mss
-
-on property:persist.vendor.ssr.restart_level=mss && property:ro.kernel.version=5.4
-    setprop persist.vendor.ssr.restart_level modem
 
 # BootReceiver tracing instance
 # The main users of this instance are KFENCE and MTE-aided KASAN, which are only
@@ -358,11 +361,11 @@ service vendor.minrtc_set /vendor/bin/misc_writer --set-minrtc ${persist.vendor.
     disabled
     oneshot
 
-service vendor.dst_transition /vendor/bin/misc_writer --set-dsttransition ${persist.sys.time.dst_transition}
+service vendor.dst_transition /vendor/bin/misc_writer --set-dsttransition ${persist.sys.time.dst_transition:-0}
     disabled
     oneshot
 
-service vendor.dst_offset /vendor/bin/misc_writer --set-dstoffset ${persist.sys.time.dst_offset}
+service vendor.dst_offset /vendor/bin/misc_writer --set-dstoffset ${persist.sys.time.dst_offset:-0}
     disabled
     oneshot
 
@@ -383,3 +386,6 @@ on property:persist.sys.time.dst_transition=*
 
 on property:persist.sys.time.dst_offset=*
     start vendor.dst_offset
+
+on property:sys.boot_completed=1
+    exec_background -- /vendor/bin/sh /vendor/bin/sw5100-enable-async-suspend.sh

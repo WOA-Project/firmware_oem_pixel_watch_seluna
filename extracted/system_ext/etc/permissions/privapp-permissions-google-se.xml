@@ -35,10 +35,12 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.ACCESS_AMBIENT_CONTEXT_EVENT"/>
         <permission name="android.permission.CONTROL_UI_TRACING" />
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
+        <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.android.settings">
         <permission name="android.permission.INSTALL_DYNAMIC_SYSTEM"/>
+        <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.storagemanager">
@@ -75,6 +77,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="android.permission.SET_UNRESTRICTED_KEEP_CLEAR_AREAS"/>
         <permission name="android.permission.ACCESS_HIDDEN_PROFILES_FULL"/>
+        <permission name="android.permission.READ_SEARCH_INDEXABLES" />
+        <permission name="android.permission.ACCESS_CONTEXTUAL_SEARCH" />
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.gsf">
@@ -258,4 +262,12 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_USERS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.google.android.apps.magicportrait">
+        <permission name="android.permission.MANAGE_WALLPAPER_EFFECTS_GENERATION" />
+        <permission name="android.permission.ACCESS_SMARTSPACE" />
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.multiuser">
+        <permission name="android.permission.MANAGE_USERS"/>
+    </privapp-permissions>
 </permissions>

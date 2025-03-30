@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2022,2024 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -42,6 +42,9 @@ on early-init
     # Set the console loglevel to < KERN_WARN
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "4 6 1 7"
+
+    exec_start gki.modprobe
+    start vendor.modprobe
 
     # Mount tracefs in /sys/kernel/tracing as CONFIG_DEBUG_FS might be
     # disabled and /sys/kernel/debug/tracing might not be available

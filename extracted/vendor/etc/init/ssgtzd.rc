@@ -1,4 +1,4 @@
-# Copyright (c) 2019 Qualcomm Technologies, Inc.
+# Copyright (c) 2019, 2024 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 
@@ -6,6 +6,8 @@
 # Create the directories used by qwes
 on post-fs-data
     mkdir /data/vendor/qwes 0755 system system
+    mkdir /mnt/vendor/persist/data/pfm 0755 system system
+    mkdir /mnt/vendor/persist/data/pfm/licenses 0755 system system
 
 # Start daemon on early-init
 on early-boot

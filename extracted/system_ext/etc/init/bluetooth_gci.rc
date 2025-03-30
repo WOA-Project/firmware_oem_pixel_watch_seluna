@@ -1,0 +1,5 @@
+service bluetooth_gci /system_ext/bin/bluetooth_gci
+    user shell
+    group bluetooth ext_data_rw
+    oneshot
+    disabled

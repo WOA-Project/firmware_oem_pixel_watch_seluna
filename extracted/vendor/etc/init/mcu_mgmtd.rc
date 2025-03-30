@@ -8,7 +8,7 @@ service mcu_mgmtd /vendor/bin/mcu_mgmtd
     group system
     socket mcu_cwy_rpc stream 0660 system system
     socket mcu_event seqpacket 0660 system system
-    socket mcu_pw_rpc stream 0660 system system
+    socket mcu_rpc stream 0660 system system
 
 
 on post-fs-data
@@ -20,3 +20,5 @@ on post-fs-data
     write /data/vendor/mcu_firmware/original-version.txt "0.0"
     chmod 660 /data/vendor/mcu_firmware/original-version.txt
     chown system system /data/vendor/mcu_firmware/original-version.txt
+    # Mendel directory
+    mkdir /data/vendor/mcu_mendel 0771 system system

@@ -1,0 +1,9 @@
+ro.product.product.device=luna
+ro.product.product.name=luna
+ro.product.device_for_attestation=luna
+ro.product.name_for_attestation=luna
+ro.power.location.x=456
+ro.power.location.y=228
+ro.stem_primary.location.x=425
+ro.stem_primary.location.y=114
+ro.product.bootanim.file=bootanimation-456.zip

@@ -1,0 +1,9 @@
+ro.product.product.device=selene
+ro.product.product.name=selene
+ro.product.device_for_attestation=selene
+ro.product.name_for_attestation=selene
+ro.power.location.x=408
+ro.power.location.y=204
+ro.stem_primary.location.x=381
+ro.stem_primary.location.y=102
+ro.product.bootanim.file=bootanimation-408.zip

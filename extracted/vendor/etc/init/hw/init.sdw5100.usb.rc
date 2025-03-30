@@ -162,15 +162,15 @@ on post-fs-data
     mkdir /config/usb_gadget/g1/functions/rmnet_bam.dpl 0770 system usb
     mkdir /config/usb_gadget/g1/functions/rmnet_bam.rmnet_bam_dmux 0770 system usb
     mkdir /config/usb_gadget/g1/functions/rmnet_bam.dpl_bam_dmux 0770 system usb
-    mkdir /config/usb_gadget/g1/functions/ncm.0 0770 system usb
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/host_addr
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/ifname
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/os_desc
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/dev_addr
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/os_desc/interface.ncm
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/os_desc/interface.ncm/compatible_id
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/os_desc/interface.ncm/sub_compatible_id
-    chown system usb /config/usb_gadget/g1/functions/ncm.0/qmult
+    mkdir /config/usb_gadget/g1/functions/ncm.gs6 0770 system usb
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/host_addr
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/ifname
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/os_desc
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/dev_addr
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/os_desc/interface.ncm
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/os_desc/interface.ncm/compatible_id
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/os_desc/interface.ncm/sub_compatible_id
+    chown system usb /config/usb_gadget/g1/functions/ncm.gs6/qmult
     mkdir /config/usb_gadget/g1/functions/ccid.ccid 0770 system usb
     mkdir /config/usb_gadget/g1/functions/uac2.0 0770 system usb
     mkdir /config/usb_gadget/g1/functions/uvc.0 0770 system usb
@@ -845,7 +845,7 @@ on property:sys.usb.config=ncm && property:sys.usb.configfs=1
     rm /config/usb_gadget/g1/configs/b.1/f9
     write /config/usb_gadget/g1/idVendor 0x05C6
     write /config/usb_gadget/g1/idProduct 0xA4A1
-    symlink /config/usb_gadget/g1/functions/ncm.0 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ncm.gs6 /config/usb_gadget/g1/configs/b.1/f1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
@@ -866,7 +866,7 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ncm,adb && property:s
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
     write /config/usb_gadget/g1/idVendor 0x05C6
     write /config/usb_gadget/g1/idProduct 0x908C
-    symlink /config/usb_gadget/g1/functions/ncm.0 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ncm.gs6 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}

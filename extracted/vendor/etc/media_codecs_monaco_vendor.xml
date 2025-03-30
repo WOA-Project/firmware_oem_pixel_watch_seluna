@@ -67,7 +67,9 @@
 
 <MediaCodecs>
     <Include href="media_codecs_google_c2_audio.xml" />
+    <Include href="media_codecs_vendor_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
+    <Include href="media_codecs_c2_audio.xml" />
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="11" />
     </Settings>
@@ -165,6 +167,7 @@
             <Limit name="bitrate" range="1-60000000" />
             <Limit name="frame-rate" range="1-120" />
             <Limit name="concurrent-instances" max="16" />
+            <Feature name="bitrate-modes" value="VBR,CBR" />
             <Limit name="performance-point-1920x1080" value="50" />
             <Limit name="performance-point-1280x720" value="100" />
         </MediaCodec>
@@ -180,6 +183,33 @@
             <Feature name="bitrate-modes" value="VBR,CBR" />
             <Limit name="performance-point-1920x1080" value="50" />
             <Limit name="performance-point-1280x720" value="100" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.hevc.encoder.cq" type="video/hevc">
+            <Alias name="OMX.qcom.video.encoder.hevc.cq"/>
+            <Limit name="size" min="128x128" max="512x512" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="64" max="786432" />
+            <Limit name="bitrate" range="1-60000000" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Limit name="quality" range="0-100" default="80" />
+            <Feature name="bitrate-modes" value="CQ" />
+            <Limit name="performance-point-512x512" value="2025" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.heic.encoder" type="image/vnd.android.heic">
+            <Alias name="OMX.qcom.video.encoder.heic"/>
+            <Limit name="size" min="512x512" max="8192x8192" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1024" max="262144" />
+            <Limit name="bitrate" range="1-60000000" />
+            <Limit name="frame-rate" range="1-20" />
+            <Limit name="concurrent-instances" max="6" />
+            <Limit name="quality" range="0-100" default="80" />
+            <Feature name="bitrate-modes" value="CQ" />
+            <Limit name="performance-point-8192x4320" value="3" />
+            <Limit name="performance-point-1920x1080" value="6" />
         </MediaCodec>
         <MediaCodec name="c2.android.hevc.encoder" type="video/hevc" update="true" variant="slow-cpu">
             <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->

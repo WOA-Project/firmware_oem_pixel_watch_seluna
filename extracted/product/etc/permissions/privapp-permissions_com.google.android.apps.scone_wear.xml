@@ -2,6 +2,7 @@
 <permissions>
     <privapp-permissions package="com.google.android.apps.scone">
         <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>

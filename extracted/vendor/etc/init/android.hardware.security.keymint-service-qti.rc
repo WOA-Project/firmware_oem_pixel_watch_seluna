@@ -9,3 +9,9 @@ service vendor.keymint-qti /vendor/bin/hw/android.hardware.security.keymint-serv
     class early_hal
     user system
     group system drmrpc
+
+on property:vendor.car.hiber=hiberExit
+    stop vendor.keymint-qti
+    start vendor.keymint-qti
+    stop keystore2
+    start keystore2

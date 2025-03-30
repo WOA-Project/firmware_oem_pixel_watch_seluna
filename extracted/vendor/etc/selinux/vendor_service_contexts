@@ -1,11 +1,11 @@
 vendor.google.wifi_ext.IWifiExt/default  u:object_r:hal_wifi_ext_service:s0
-android.hardware.vibrator.IVibrator/dual                             u:object_r:hal_vibrator_service:s0
 vendor.google.bluetooth_ext.IBTChannelAvoidance/default                      u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothSar/default                            u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothCcc/default                            u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothEwp/default                            u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothExt/default                            u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothFinder/default                         u:object_r:hal_bluetooth_coexistence_service:s0
+android.hardware.vibrator.IVibrator/dual                             u:object_r:hal_vibrator_service:s0
 vendor.qti.data.factoryservice.IFactory/default                       u:object_r:vendor_hal_factory_aidlservice:s0
 android.hardware.neuralnetworks.IDevice/qti-default                   u:object_r:hal_neuralnetworks_service:s0
 android.hardware.neuralnetworks.IDevice/qti-gpu                       u:object_r:hal_neuralnetworks_service:s0
@@ -97,6 +97,5 @@ vendor.qti.hardware.secureprocessor.device.ISecureProcessor/qti-tvm            u
 vendor.qti.hardware.fingerprint.IQfpExtendedFingerprint/default u:object_r:vendor_hal_qfpextendedfingerprint_service:s0
 vendor.qti.hardware.qteeconnector.IAppConnector/default                   u:object_r:vendor_hal_qteeconnector_service:s0
 vendor.qti.hardware.qteeconnector.IGPAppConnector/default                 u:object_r:vendor_hal_qteeconnector_service:s0
-vendor.qti.hardware.qteeconnector.IAppConnector/default                   u:object_r:vendor_hal_qteeconnector_service:s0
-vendor.qti.hardware.qteeconnector.IGPAppConnector/default                 u:object_r:vendor_hal_qteeconnector_service:s0
 power.stats-vendor    u:object_r:hal_power_stats_vendor_service:s0
+com.google.android.wearable.pixel.wac.aidl.IWacManagementService/default u:object_r:hal_wac_management_service:s0

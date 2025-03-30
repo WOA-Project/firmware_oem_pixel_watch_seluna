@@ -1,0 +1,10 @@
+<!--
+    Input:
+        device/google/sw5100/health/android.hardware.health-service.sw5100.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.health</name>
+        <fqname>IHealth/default</fqname>
+    </hal>
+</manifest>

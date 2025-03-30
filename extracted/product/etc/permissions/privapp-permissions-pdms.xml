@@ -15,5 +15,6 @@
     <permission name="com.google.wear.permission.WRITE_FOCUS_MODES"/>
     <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
     <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+    <permission name="com.google.wear.permission.MANAGE_SUBMERSION_STATE"/>
   </privapp-permissions>
 </permissions>

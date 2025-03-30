@@ -1,11 +1,12 @@
 <!--
     Input:
+        device/google/sw5100/manifest-8.xml
         device/google/sw5100/manifest.xml
         device/google/sw5100/manifest_telephony.xml
         device/google/seluna/bluetooth/manifest_bt.xml
         device/google/sw5100/manifest_ese.xml
 -->
-<manifest version="8.0" type="device" target-level="8">
+<manifest version="9.0" type="device" target-level="8">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -19,6 +20,10 @@
     <hal format="aidl">
         <name>android.hardware.bluetooth</name>
         <fqname>IBluetoothHci/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.bluetooth.ranging</name>
+        <fqname>IBluetoothChannelSounding/default</fqname>
     </hal>
     <hal format="aidl">
         <name>android.hardware.gatekeeper</name>
@@ -42,11 +47,6 @@
         <name>android.hardware.tetheroffload.control</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IOffloadControl/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>hardware.google.bluetooth.sar</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::IBluetoothSar/default</fqname>
     </hal>
     <hal format="aidl">
         <name>vendor.google.bluetooth_ext</name>

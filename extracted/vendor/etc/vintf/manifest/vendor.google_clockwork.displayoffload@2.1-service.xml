@@ -1,8 +1,8 @@
 <!--
     Input:
-        device/google/sw5100/displayoffload_v2_1/vendor.google_clockwork.displayoffload@2.1-service.xml
+        vendor/google/services/PixelWatchDisplayOffload/v2/vendor.google_clockwork.displayoffload@2.1-service.xml
 -->
-<manifest version="8.0" type="device">
+<manifest version="9.0" type="device">
     <hal format="hidl">
         <name>vendor.google_clockwork.displayoffload</name>
         <transport>hwbinder</transport>

@@ -1,5 +1,5 @@
 ####################################
-# from generate-common-build-props
+# from generate_common_build_props
 # These properties identify this partition image.
 ####################################
 ro.product.product.brand=google
@@ -7,33 +7,84 @@ ro.product.product.device=seluna
 ro.product.product.manufacturer=Google
 ro.product.product.model=Pixel Watch 3
 ro.product.product.name=seluna
-ro.product.build.date=Wed Jul 17 15:50:53 UTC 2024
-ro.product.build.date.utc=1721231453
-ro.product.build.fingerprint=google/seluna/seluna:14/AW2A.240903.001.A3/12102650:user/release-keys
-ro.product.build.id=AW2A.240903.001.A3
+ro.product.build.date=Fri Feb 21 22:48:40 UTC 2025
+ro.product.build.date.utc=1740178120
+ro.product.build.fingerprint=google/seluna/seluna:15/BP1A.250305.019.W3/13104707:user/release-keys
+ro.product.build.id=BP1A.250305.019.W3
 ro.product.build.tags=release-keys
 ro.product.build.type=user
-ro.product.build.version.incremental=12102650
-ro.product.build.version.release=14
-ro.product.build.version.release_or_codename=14
-ro.product.build.version.sdk=34
+ro.product.build.version.incremental=13104707
+ro.product.build.version.release=15
+ro.product.build.version.release_or_codename=15
+ro.product.build.version.sdk=35
+ro.product.build.version.sdk_minor=0
+####################################
+# from device/google/seluna/product.prop
+####################################
+import /product/etc/build_${ro.boot.hardware}.prop
+####################################
+# from device/google/seluna/bluetooth/bluetooth.prop
+####################################
+# Bluetooth
+bluetooth.profile.bap.broadcast.assist.enabled=false
+bluetooth.profile.bap.unicast.client.enabled=true
+bluetooth.profile.csip.set_coordinator.enabled=true
+bluetooth.profile.mcp.server.enabled=true
+bluetooth.profile.ccp.server.enabled=true
+bluetooth.profile.vcp.controller.enabled=true
+bluetooth.a2dp.source.aptx_priority.config=-1
+bluetooth.a2dp.source.aptx_hd_priority.config=-1
+bluetooth.a2dp.source.ldac_priority.config=-1
+bluetooth.core.classic.sniff_max_intervals=816,400,54,150,18,36,18,800
+bluetooth.core.classic.sniff_min_intervals=400,200,30,50,10,30,14,400
+bluetooth.core.classic.sniff_attempts=4,4,4,4,4,2,1,0
+bluetooth.core.classic.sniff_timeouts=1,1,1,1,1,0,0,0
+bluetooth.bta_fts_ops_idle_to_sniff_delay_ms.config=2000
+bluetooth.bta_ftc_idle_to_sniff_delay_ms.config=1000
+bluetooth.hfp.version.config=0x109
+bluetooth.hfp.swb.supported=true
+# Bluetooth Page scan Interval time = N * 0.625 ms
+# Range: 0x0012 to 0x1000, Default value: 0x400
+bluetooth.core.classic.page_scan_interval=2048
+# The bluetooth stack needs 10s to start when running in passthrough mode
+bluetooth.gd.start_timeout=10000
+# The Hci command timeout value for BT stack
+bluetooth.hci.timeout_milliseconds=5000
+# After hitting HCI command timeout issue, waiting time for the BT stack to assert
+# after sending the controller debug info command
+bluetooth.hci.restart_timeout_milliseconds=5000
+persist.vendor.bluetooth.enable_lpm=true
+persist.bluetooth.leaudio_offload.disabled=false
+persist.display_le_audio_toggle=false
+ro.bluetooth.leaudio_offload.supported=true
+persist.vendor.bluetooth.enable_duration_tracker=true
+# Bluetooth device id
+# Seluna: 0x3103
+bluetooth.device_id.product_id=12547
+# b/381773720 - Increase the BTHAL wakelock timeout to keep whole system awake until WearServices is finished processing notifications
+persist.vendor.bluetooth.wakelock_timeout=500
 ####################################
 # from vendor/google_devices/seluna/prebuilts/nonhlos_versions.prop
 ####################################
-ro.vendor.qc_release.adsp=ADSP.IT.2.1-00139-ATHERTON-1
-ro.vendor.qc_release.apps=LW.UM.2.3.r1-02700-SW5100.0-1
-ro.vendor.qc_release.boot=BOOT.XF.4.3-00248-ATHERTONLAZ-2
-ro.vendor.qc_release.build=SW5100.LW.3.0 CS 0.0.044.2 OEM 5D992.c 379017
-ro.vendor.qc_release.glue=GLUE.ATHERTON_LW.2.0-00083-NOOP_TEST-1
-ro.vendor.qc_release.modem=MPSS.HA.2.0.1-00111-ATHERTON_GEN_PACK-1
-ro.vendor.qc_release.rpm=RPM.BF.1.12-00107-ATHERTONAAAAANAZR-1
+ro.vendor.qc_release.adsp=ADSP.IT.2.1-00156-ATHERTON-1
+ro.vendor.qc_release.apps=LW.UM.2.3.r1-03800-SW5100.0-1
+ro.vendor.qc_release.boot=BOOT.XF.4.3-00257-ATHERTONLAZ-1
+ro.vendor.qc_release.build=SW5100.LW.3.0 Post-CS3 0.0.076.1a OEM 5D992.c 387431
+ro.vendor.qc_release.glue=GLUE.ATHERTON_LW.2.0-00092-NOOP_TEST-1
+ro.vendor.qc_release.modem=MPSS.HA.2.0.1-00178-ATHERTON_GEN_PACK-1
+ro.vendor.qc_release.rpm=RPM.BF.1.12-00110-ATHERTONAAAAANAZR-1
 ro.vendor.qc_release.tz_apps=TZ.APPS.2.0.1-00120-KAMORTAAAAAANAZT-2
-ro.vendor.qc_release.tz=TZ.XF.5.1.5-00346-ATHERTONAAAANBZT-1.70592.3
-ro.vendor.qc_release.wlan=WLAN.HL.3.4.1.c1-00229-QCAHLSWMTPLZ-1
+ro.vendor.qc_release.tz=TZ.XF.5.1.5-00350-ATHERTONAAAANBZT-1
+ro.vendor.qc_release.wlan=WLAN.HL.3.4.1.c1-00238-QCAHLSWMTPLZ-1
+####################################
+# from device/google/seluna/bluetooth/sniff_offload.prop
+####################################
+persist.bluetooth.sniff_offload.enabled=true
 ####################################
 # from variable ADDITIONAL_PRODUCT_PROPERTIES
 ####################################
 ro.product.build.16k_page.enabled=false
+ro.product.page_size=4096
 ro.build.characteristics=nosdcard,watch
 ro.product.ab_ota_partitions=abl,adsp_oda,boot,devcfg,dtbo,eseproxy,eseservice,hyp,imagefv,init_boot,keymaster,modem,multiimgoem,odm,product,qupfw,rpm,system,system_dlkm,system_ext,tz,uefisecapp,vbmeta,vbmeta_system,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot,xbl,xbl_config
 ro.product.cpu.pagesize.max=4096

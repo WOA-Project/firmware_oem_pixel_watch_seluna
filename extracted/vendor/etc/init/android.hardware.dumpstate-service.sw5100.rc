@@ -5,7 +5,7 @@ on fs
 service vendor.dumpstate-default /vendor/bin/hw/android.hardware.dumpstate-service.sw5100
     class hal
     user system
-    group system context_hub wifi
+    group system context_hub wifi bluetooth
     interface aidl android.hardware.dumpstate.IDumpstateDevice/default
     oneshot
     disabled

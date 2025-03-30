@@ -17,6 +17,8 @@
 
 <permissions>
     <privapp-permissions package="com.google.SSRestartDetector">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
     </privapp-permissions>
 </permissions>

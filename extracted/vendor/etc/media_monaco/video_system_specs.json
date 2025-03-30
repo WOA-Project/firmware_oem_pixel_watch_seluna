@@ -120,7 +120,9 @@
             ],
             "encoders": [
                 "c2.qti.avc.encoder",
-                "c2.qti.hevc.encoder"
+                "c2.qti.hevc.encoder",
+                "c2.qti.hevc.encoder.cq",
+                "c2.qti.heic.encoder"
             ]
         }
     }

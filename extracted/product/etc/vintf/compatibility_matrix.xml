@@ -1,0 +1,13 @@
+<!--
+    Input:
+        device/google/seluna/device_product_compatibility_matrix.xml
+-->
+<compatibility-matrix version="9.0" type="framework">
+    <hal format="aidl" optional="true">
+        <name>com.google.android.wearable.pixel.wac.aidl</name>
+        <interface>
+            <name>IWacManagementService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

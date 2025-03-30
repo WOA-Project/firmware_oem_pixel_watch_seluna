@@ -1,4 +1,5 @@
 {
+    "Comment":"SOTA profile",
     "Sensors":[
         {
             "Name":"sdm-skin-therm",
@@ -22,7 +23,8 @@
                 0.9
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"audio-therm",
@@ -46,7 +48,8 @@
                 0.9
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"gpu",
@@ -61,7 +64,8 @@
                 80.0
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"cpuss-0",
@@ -76,7 +80,8 @@
                 80.0
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"cpuss-1",
@@ -91,7 +96,8 @@
                 80.0
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"mdm-0",
@@ -106,7 +112,8 @@
                 80.0
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"mdm-1",
@@ -121,7 +128,8 @@
                 80.0
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"wlan",
@@ -136,7 +144,8 @@
                 80.0
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         },
         {
             "Name":"battery",
@@ -151,7 +160,8 @@
                 60.0
             ],
             "Multiplier":0.001,
-            "Monitor":true
+            "SendCallback":true,
+            "LogLevel":1
         }
     ]
 }

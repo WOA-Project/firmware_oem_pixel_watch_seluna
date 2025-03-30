@@ -10,3 +10,7 @@ service vendor.qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root drmrpc
+
+on property:vendor.car.hiber=hiberExit
+   stop vendor.qseecomd
+   start vendor.qseecomd

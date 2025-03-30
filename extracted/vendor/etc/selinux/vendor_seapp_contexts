@@ -22,5 +22,4 @@ user=_app seinfo=platform name=.pasr domain=vendor_powerservice_app type=app_dat
 user=_app seinfo=platform name=com.qualcomm.qti.sidekickmetrics domain=vendor_sidekick_metrics_service type=app_data_file levelFrom=all
 user=_app seinfo=platform name=com.qualcomm.qti.aonutility domain=vendor_aonutility_service type=app_data_file levelFrom=all
 user=_app seinfo=platform name=com.qualcomm.qti.powerstatemanagerservice domain=powerstatemanager_service type=app_data_file levelFrom=all
-user=_app isPrivApp=true name=com.google.android.apps.internal.wearables.ppgdatacollector domain=data_streamer_app type=privapp_data_file levelFrom=all
 user=_app isPrivApp=true name=com.google.android.hardwareinfo domain=hardware_info_app type=app_data_file levelFrom=user

@@ -15,4 +15,9 @@
         <component class="com.android.devicelockcontroller.receivers.ResetDeviceReceiver" enabled="false" />
         <component class="com.android.devicelockcontroller.WorkManagerExceptionHandler$WorkFailureAlarmReceiver" enabled="false" />
     </component-override>
+
+    <component-override package="com.android.theflippinapp" >
+        <component class="com.android.theflippinapp.activity.MainActivity" enabled="true" />
+    </component-override>
 </config>
+

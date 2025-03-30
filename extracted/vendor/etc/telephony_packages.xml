@@ -45,6 +45,7 @@
     <packageinfo name="com.qti.telephonysettings.2" path="/system_ext/app/QtiTelephonySettings" />
     <packageinfo name="com.qti.qualcomm.carriertest" path="/system_ext/app/CarrierTest" />
     <packageinfo name="com.qti.qualcomm.datastatusnotification" path="/system_ext/app/datastatusnotification" />
+    <packageinfo name="com.qti.qualcomm.datastatusnotification.2" path="/product/app/datastatusnotification" />
     <packageinfo name="com.qti.qualcomm.deviceinfo" path="/system_ext/app/DeviceInfo" />
     <packageinfo name="com.qti.xdivert" path="/product/app/xdivert" />
     <packageinfo name="com.qualcomm.atfwd" path="/system_ext/app/atfwd" />
@@ -55,6 +56,7 @@
     <packageinfo name="com.qualcomm.qti.callfeaturessetting" path="/product/app/CallFeaturesSetting" />
     <packageinfo name="com.qualcomm.qti.confdialer" path="/product/app/ConferenceDialer" />
     <packageinfo name="com.qualcomm.qti.devicestatisticsservice" path="/system_ext/app/DeviceStatisticsService" />
+    <packageinfo name="com.qualcomm.qti.devicestatisticsservice.2" path="/product/app/DeviceStatisticsService" />
     <packageinfo name="com.qualcomm.qti.euiccresource" path="/product/app/EuiccResource" />
     <packageinfo name="com.qualcomm.qti.ims" path="/system_ext/app/imssettings" />
     <packageinfo name="com.qualcomm.qti.lpa" path="/product/app/uimlpaservice" />

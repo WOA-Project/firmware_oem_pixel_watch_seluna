@@ -1,4 +1,4 @@
-#line 1 "system/sepolicy/flagging/te_macros"
+#line 1 "system/sepolicy/flagging/flagging_macros"
 ####################################
 # is_flag_enabled(flag, rules)
 # SELinux rules which apply only if given feature is turned on
@@ -7,6 +7,20 @@
 ####################################
 # is_flag_disabled(flag, rules)
 # SELinux rules which apply only if given feature is turned off
+
+
+####################################
+# starting_at_board_api(api_level, rules_if_api_level)
+#
+# This macro conditionally exposes SELinux rules ensuring they are available
+# only when the board API level is at or above the specified 'api_level'.
+
+
+####################################
+# until_board_api(api_level, rules_if_lower_api_level)
+#
+# This macro conditionally exposes SELinux rules ensuring they are available
+# only when the board API level is below the specified 'api_level'.
 
 #line 1 "out/soong/.intermediates/system/sepolicy/contexts/system_ext_property_contexts/android_common/seluna/newline"
 
@@ -69,8 +83,13 @@ ro.bootanim.set_orientation_logical_0 u:object_r:surfaceflinger_prop:s0 exact en
 # Wear bluechip25 design system update go/wear-bc25
 persist.cw_build.bluechip.enabled    u:object_r:build_prop:s0 exact bool
 
-# System system_service config property
-ro.system_settings.service.odp_enabled   u:object_r:system_service_prop:s0 exact bool
+# Wear Mode Improvements related System properties
+persist.mode_manager_api_migration    u:object_r:wear_mode_manager_prop:s0 exact bool
+persist.zen_rule_migration    u:object_r:wear_mode_manager_prop:s0 exact bool
+persist.theater_mode_alarm_toggle_enabled    u:object_r:wear_mode_manager_prop:s0 exact bool
+
+# Wear Dynamic theming related System property
+persist.dynamic_theming_enabled    u:object_r:wear_dynamic_theming_prop:s0 exact bool
 #line 1 "out/soong/.intermediates/system/sepolicy/contexts/system_ext_property_contexts/android_common/seluna/newline"
 
 #line 1 "device/google/sw5100-sepolicy/generic/private/property_contexts"

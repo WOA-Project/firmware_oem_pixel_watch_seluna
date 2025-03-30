@@ -1,4 +1,4 @@
-#line 1 "system/sepolicy/flagging/te_macros"
+#line 1 "system/sepolicy/flagging/flagging_macros"
 ####################################
 # is_flag_enabled(flag, rules)
 # SELinux rules which apply only if given feature is turned on
@@ -7,6 +7,20 @@
 ####################################
 # is_flag_disabled(flag, rules)
 # SELinux rules which apply only if given feature is turned off
+
+
+####################################
+# starting_at_board_api(api_level, rules_if_api_level)
+#
+# This macro conditionally exposes SELinux rules ensuring they are available
+# only when the board API level is at or above the specified 'api_level'.
+
+
+####################################
+# until_board_api(api_level, rules_if_lower_api_level)
+#
+# This macro conditionally exposes SELinux rules ensuring they are available
+# only when the board API level is below the specified 'api_level'.
 
 #line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"
 
@@ -92,14 +106,14 @@ vendor.thermal.reload_default_config u:object_r:vendor_thermal_dynamic_config_pr
 # Qbg governor
 vendor.qbg.restart_hvdcp             u:object_r:vendor_qbg_governor_prop:s0
 init.svc_debug_pid.vendor.hvdcp_opti u:object_r:vendor_qbg_governor_pid_prop:s0
+ro.vendor.build.hvdcp_opti           u:object_r:vendor_qbg_governor_prop:s0
 
 # Touch
 ro.vendor.touch.dump_path               u:object_r:vendor_touch_prop:s0
-#line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"
 
-#line 1 "hardware/google/pixel-sepolicy/vibrator/common/property_contexts"
-ro.vendor.vibrator.hal.         u:object_r:vendor_vibrator_prop:s0
-persist.vendor.vibrator.hal.    u:object_r:vendor_vibrator_prop:s0
+# Allow PDMS to write to this property temporarily.
+# TODO: b/391706282 - Remove.
+persist.vendor.bluetooth.wakelock_timeout   u:object_r:vendor_bluetooth_wakelock_timeout_prop:s0
 #line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"
 
 #line 1 "hardware/google/pixel-sepolicy/power-libperfmgr/property_contexts"
@@ -112,6 +126,11 @@ vendor.thermal.                           u:object_r:vendor_thermal_prop:s0
 
 #line 1 "device/google/seluna/sepolicy/property_contexts"
 ro.boot.theme                 u:object_r:bootanim_config_prop:s0 exact bool
+#line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"
+
+#line 1 "hardware/google/pixel-sepolicy/vibrator/common/property_contexts"
+ro.vendor.vibrator.hal.         u:object_r:vendor_vibrator_prop:s0
+persist.vendor.vibrator.hal.    u:object_r:vendor_vibrator_prop:s0
 #line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"
 
 #line 1 "device/google/sw5100-sepolicy/generic/vendor/common/property_contexts"
@@ -345,6 +364,7 @@ vendor.perf.gestureflingboost.enable   u:object_r:vendor_scroll_prop:s0
 # NFC
 vendor.qti.nfc.                              u:object_r:vendor_nfc_nq_prop:s0
 
+vendor.nfc.min_firmware                      u:object_r:vendor_nfc_prop:s0
 # eSE
 vendor.qti.ese.                              u:object_r:vendor_ese_prop:s0
 
@@ -500,20 +520,15 @@ persist.vendor.mcu_reset_on_crash_enabled    u:object_r:vendor_mcu_prop:s0
 persist.vendor.mcu_deep_sleep_enabled        u:object_r:vendor_mcu_prop:s0
 persist.vendor.mcu_watchdog_enabled          u:object_r:vendor_mcu_prop:s0
 persist.vendor.mcu_watchdog_timeout_val      u:object_r:vendor_mcu_prop:s0
+persist.vendor.mcu_auto_retrieve_coredump    u:object_r:vendor_mcu_prop:s0
 vendor.wac.state                             u:object_r:vendor_mcu_prop:s0
 
 vendor.blhost.fw.download.                   u:object_r:vendor_mcu_blhost_prop:s0
 ro.vendor.mcu.uart.dev.path                  u:object_r:vendor_mcu_uart_dev_prop:s0
 #line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"
 
-#line 1 "device/google/sw5100-sepolicy/google/vendor/data_streamer/property_contexts"
-# Data Streamer provisioned device property
-persist.vendor.hti        u:object_r:vendor_hti_prop:s0
-#line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"
-
 #line 1 "device/google/sw5100-sepolicy/nxp/vendor/property_contexts"
 # NFC properties
-vendor.nfc.min_firmware     u:object_r:vendor_nfc_prop:s0
 persist.vendor.nfc.         u:object_r:vendor_nfc_prop:s0
 persist.vendor.uwb.         u:object_r:vendor_uwb_prop:s0
 #line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_property_contexts/android_common/seluna/newline"

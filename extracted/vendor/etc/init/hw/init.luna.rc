@@ -39,6 +39,9 @@ on init && property:ro.hardware=*
     setprop persist.vendor.nfc.config_file_name libnfc-nxp.${ro.hardware}.conf
     setprop persist.vendor.uwb.cal.sku ${ro.hardware}
 
+on init && property:ro.revision=*
+    setprop persist.vendor.uwb.cal.revision ${ro.revision}
+
 # Set Fast Pair ID based on provisioned case/band color
 
 # Selene

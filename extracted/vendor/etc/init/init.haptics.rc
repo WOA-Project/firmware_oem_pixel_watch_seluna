@@ -16,4 +16,7 @@ on property:vendor.all.modules.ready=1
     chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/f0_comp_enable
     chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/redc_comp_enable
     chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/delay_before_stop_playback_us
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/braking_time_bank
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/braking_time_index
+    chown system system /sys/devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a80000.i2c/i2c-0/0-0043/default/braking_time_ms
     enable vendor.vibrator.cs40l26

@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/google/wearable/wac/mcu/mcu_mgmtd.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>com.google.android.wearable.pixel.wac.aidl</name>
+        <fqname>IWacManagementService/default</fqname>
+    </hal>
+</manifest>
